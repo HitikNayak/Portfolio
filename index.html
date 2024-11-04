@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hitik Kumar Nayak . PORTFOLIO</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="hkn logo.jpg" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#certificates">Certificate</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Message from designer</p>
+                    <h1>Hello, I'm <span>Hitik</span><br>Kumar Nayak</h1>
+                </div>
+            </div>
+        </div>
+
+        <!--- About Section -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Photo HITIK.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I have experience with Web development, signal processing, and MATLAB, and enjoy problem-solving in both programming and engineering contexts.<br>I'm proactive, having worked on projects like Shannon capacity calculations and internships, where I’ve gained practical insights.<br>My interests lie in mastering technical skills and expanding my knowledge base.</p>
+
+                        <div class="tab-titles">
+                            <div class="tab-links active-link" onclick="opentab(this, 'skills')">Skills</div>
+                            <div class="tab-links" onclick="opentab(this, 'internships')">Internships</div>
+                            <div class="tab-links" onclick="opentab(this, 'education')">Education</div>
+                        </div>
+                        <div class="tab-contains active-tab" id="skills">
+                            <ul>
+                                <li><span>MATLAB</span><br>6g Channel Bandwidth</li>
+                                <li><span>CMOS</span><br>Hybrid full adder using LT spice</li>
+                                <li><span>Web Development</span><br>Weather App <br>Japan Job recruit website</li>
+                                <li><span>Python</span><br>Password Generator <br>MCQ answering</li>
+                                <li><span>Content Writing</span><br>Fluctuation of Stock Market</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contains" id="internships">
+                            <ul>
+                                <li><span>NIT Raipur (CMOS)</span><br>Hybrid full adder using LT spice</li>
+                                <li><span>Softnetix (Python)</span><br>Password Generator <br>MCQ answering</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contains" id="education">
+                            <ul>
+                                <li><span>2019</span><br>Matric (CBSE)</li>
+                                <li><span>2021</span><br>Intermediate (CBSE)</li>
+                                <li><span>2021-25</span><br>ECE B.Tech from Guru Ghasidas University</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---Certificates-->
+<div id="certificates">
+    <div class="container">
+        <h1 class="sub-title">My Certificates</h1>
+        <div class="certificates-list">
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Python Development</h2>
+                <p>Completed a virtual internship focused on Python applications, including password generation.</p>
+                <a href="SOFTNETIX intern.jpg" target="_blank" class="btn btn2">View</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-microchip"></i>
+                <h2>CMOS & Verilog Certification</h2>
+                <p>Hands-on training in CMOS and Verilog during a summer internship at NIT Raipur.</p>
+                <a href="NITR intern.jpg" target="_blank" class="btn btn2">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+       <!--portfolio-->
+       <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="web-developement.jpg">
+                    <div class="layer">
+                        <h3>Wheather Forcasting</h3>
+                        <p>It shows the Weather of any area or locality.</p>
+                        <a href="https://hitiknayak.github.io/weather-app/"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="python.jpg">
+                    <div class="layer">
+                        <h3>Password Generator</h3>
+                        <p>It generate strong pasword using Python.</p>
+                        <a href="https://www.linkedin.com/posts/hitik-kumar-nayak_softnetix-internship-webdevelopment-activity-7190707346942185472-3Ae1?utm_source=share&utm_medium=member_desktop"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="matlab.jpg">
+                    <div class="layer">
+                        <h3>Shannon Fano's Capacitnce</h3>
+                        <p>It shows the calculation & visualization of Shannon Capacitance.</p>
+                        <a href="Shannon C work.jpg"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       </div>
+
+       <!--contact-->
+       <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <!-- Email Link with Icon -->
+                       <p>
+                            <a href="mailto:hitikkumarnayak22@gmail.com" class="email-link">
+                            <i class="fa-solid fa-paper-plane"></i> hitikkumarnayak22@gmail.com
+                            </a>
+                      </p>
+    
+                    <!-- Phone Link with Icon -->
+                        <p>
+                            <a href="tel:+917978594517" class="phone-link">
+                            <i class="fa-solid fa-phone"></i> +91 7978594517
+                            </a>
+                       </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/hitik-kumar-nayak/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/HitikN"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/hitik_nayak02"><i class="fa-brands fa-instagram"></i></a>                        
+                    </div>
+                    <a href="Hitik CV.pdf" target="_blank" class="btn btn2">View CV</a>
+                    <a href="Hitik CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Hitik Kumar Nayak</p>
+        </div>
+       </div>
+
+
+        <!-- JavaScript -->
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontains = document.getElementsByClassName("tab-contains");
+
+            function opentab(element, tabname) {
+                for (let tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (let tabcontain of tabcontains) {
+                    tabcontain.classList.remove("active-tab");
+                }
+                element.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+    
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+    
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbx3LEbeNwVQDSbWNZQHnJOHPJa_KGAAEzG27jISCwDfPGhdfd4aldDYZQoD7mb3kJZQAw/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+         </script>
+
+          
+
+
+
+
+ 
+
+    </body>
+</html>
