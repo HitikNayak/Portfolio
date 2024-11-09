@@ -194,6 +194,20 @@
                 document.getElementById(tabname).classList.add("active-tab");
             }
         </script>
+        
+        <script>
+          function togglePortfolio() {
+          const extraWorks = document.querySelectorAll('.extra-work');
+          const button = document.getElementById('portfolio-toggle');
+
+          extraWorks.forEach(work => {
+          work.classList.toggle('hidden');
+          });
+
+         button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
+         }
+      </script>
+
 
         <script>
             var sidemenu = document.getElementById("sidemenu");
