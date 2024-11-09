@@ -128,8 +128,27 @@
                         <a href="Shannon C work.jpg"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
-             <button class="see-more-btn" id="portfolio-toggle" onclick="togglePortfolio()">See More</button>
-                
+                            
+                <div class="work extra-work hidden">
+                <img src="frontend.jpg">
+                <div class="layer">
+                    <h3>Frontend Design</h3>
+                    <p>Created responsive web pages using HTML, CSS, and JavaScript.</p>
+                    <a href="frontend.jpg" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+               </div>
+               <div class="work extra-work hidden">
+                <img src="flutter.jpg">
+                <div class="layer">
+                    <h3>Flutter Mobile App</h3>
+                    <p>Developed a cross-platform mobile application using Flutter.</p>
+                    <a href="flutter.jpg" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+             </div>
+        <button class="see-more-btn" id="portfolio-toggle" onclick="togglePortfolio()">See More</button>
+
+            
             </div>
         </div>
        </div>
@@ -195,18 +214,19 @@
             }
         </script>
         
-        <script>
-          function togglePortfolio() {
-          const extraWorks = document.querySelectorAll('.extra-work');
-          const button = document.getElementById('portfolio-toggle');
+    <script>
+function togglePortfolio() {
+    const extraWorks = document.querySelectorAll('.extra-work');
+    const button = document.getElementById('portfolio-toggle');
 
-          extraWorks.forEach(work => {
-          work.classList.toggle('hidden');
-          });
+    extraWorks.forEach(work => {
+        work.classList.toggle('hidden');
+    });
 
-         button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
-         }
-      </script>
+    button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
+}
+</script>
+
 
 
         <script>
