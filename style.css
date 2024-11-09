@@ -178,50 +178,13 @@ nav ul li a:hover::after{
     padding: 30px 0;
 }
 
-.certificates-list{
+.certificates-list, .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px ;
+    grid-gap: 40px;
     margin-top: 50px;
 }
 
-
-.certificates-list div {
-    background: #272222; 
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    transition: background 0.5s, transform 0.5s;
-}
-
-.certificates-list div:hover {
-    background: red; 
-    border-radius: 10px; 
-    transform: translateY(-10px);
-}
-
-
-.certificates-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.certificates-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.certificates-list div a {
-    color: rgb(10, 237, 97); 
-    text-decoration: none; 
-    transition: color 0.3s, transform 0.3s; 
-}
-
-.certificates-list div a:hover {
-    color: black; 
-    transform: scale(1.1); 
-}
 .hidden {
     display: none;
 }
@@ -242,84 +205,172 @@ nav ul li a:hover::after{
     background-color: #0056b3;
 }
 
-#portfolio{
+.certificate, .work {
+    background: #272222;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.certificate:hover, .work:hover {
+    transform: translateY(-10px);
+    background: #ff004f;
+}
+
+.certificate a, .work a {
+    color: #0aff89;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.certificate a:hover, .work a:hover {
+    color: #fff;
+}
+
+
+#portfolio {
     padding: 50px 0;
 }
-.work-list{
+
+.sub-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Portfolio Grid */
+.work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px ;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts based on screen size */
+    gap: 40px;
     margin-top: 50px;
 }
-.hidden {
-    display: none;
-}
 
-.see-more-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.see-more-btn:hover {
-    background-color: #0056b3;
-}
-.work{
+/* Individual Work Item */
+.work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.work img{
+
+.work img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
 }
-.layer{
+
+/* Hover Effect Layer */
+.layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.5),#ff004f);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 0, 79, 0.8));
     border-radius: 10px;
     position: absolute;
     left: 0;
     bottom: 0;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
     text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
+    padding: 20px;
+    color: #fff;
+    transition: height 0.5s ease-in-out;
+    overflow: hidden;
 }
-.layer h3{
-    font-weight: 500;
+
+.layer h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 0.9rem;
     margin-bottom: 20px;
 }
-.layer a{
-    margin-top: 20px;
+
+.layer a {
+    margin-top: 10px;
+    background-color: #ffffff;
     color: #ff004f;
     text-decoration: none;
     font-size: 18px;
     line-height: 50px;
-    background: #fff;
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-.work:hover img{
+
+.layer a:hover {
+    background-color: #ff004f;
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Work Item Hover State */
+.work:hover img {
     transform: scale(1.1);
 }
-.work:hover .layer{
+
+.work:hover .layer {
     height: 100%;
 }
+
+/* "See More" Button */
+.see-more-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .layer {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sub-title {
+        font-size: 2rem;
+    }
+
+    .layer h3 {
+        font-size: 1.2rem;
+    }
+
+    .layer p {
+        font-size: 0.8rem;
+    }
+}
+
+
 .btn{
     display: block;
     margin: 50px auto;
