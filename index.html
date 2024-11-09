@@ -93,6 +93,21 @@
                 <p>Hands-on training in CMOS and Verilog during a summer internship at NIT Raipur.</p>
                 <a href="NITR intern.jpg" target="_blank" class="btn btn2">View</a>
             </div>
+
+            
+                        <div class="certificate extra-certificate hidden">
+                <i class="fa-solid fa-network-wired"></i>
+                <h2>..........</h2>
+                <p>...........</p>
+                <a href="Networking.jpg" target="_blank" class="btn btn2">View</a>
+            </div>
+            <div class="certificate extra-certificate hidden">
+                <i class="fa-solid fa-brain"></i>
+                <h2>..............</h2>
+                <p>...........</p>
+                <a href="AI_ML.jpg" target="_blank" class="btn btn2">View</a>
+            </div>
+        </div>
         <button class="see-more-btn" id="toggle-button" onclick="toggleCertificates()">See More</button>
         </div>
     </div>
@@ -132,16 +147,16 @@
                 <div class="work extra-work hidden">
                 <img src="frontend.jpg">
                 <div class="layer">
-                    <h3>Frontend Design</h3>
-                    <p>Created responsive web pages using HTML, CSS, and JavaScript.</p>
+                    <h3>...........</h3>
+                    <p>...........</p>
                     <a href="frontend.jpg" target="_blank"><i class="fa-solid fa-link"></i></a>
                 </div>
                </div>
                <div class="work extra-work hidden">
                 <img src="flutter.jpg">
                 <div class="layer">
-                    <h3>Flutter Mobile App</h3>
-                    <p>Developed a cross-platform mobile application using Flutter.</p>
+                    <h3>,........</h3>
+                    <p>...........</p>
                     <a href="flutter.jpg" target="_blank"><i class="fa-solid fa-link"></i></a>
                 </div>
               </div>
@@ -221,6 +236,21 @@ function togglePortfolio() {
 
     extraWorks.forEach(work => {
         work.classList.toggle('hidden');
+    });
+
+    button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
+}
+</script>
+
+
+        
+        <script>
+function toggleCertificates() {
+    const extraCertificates = document.querySelectorAll('.extra-certificate');
+    const button = document.getElementById('certificates-toggle');
+
+    extraCertificates.forEach(certificate => {
+        certificate.classList.toggle('hidden');
     });
 
     button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
