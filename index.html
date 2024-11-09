@@ -80,93 +80,82 @@
 <div id="certificates">
     <div class="container">
         <h1 class="sub-title">My Certificates</h1>
-        <div class="certificates-list">
-            <div>
+        <div class="certificates-list" id="certificates-content">
+            <!-- Certificate 1 -->
+            <div class="certificate">
                 <i class="fa-solid fa-laptop-code"></i>
                 <h2>Python Development</h2>
                 <p>Completed a virtual internship focused on Python applications, including password generation.</p>
                 <a href="SOFTNETIX intern.jpg" target="_blank" class="btn btn2">View</a>
             </div>
-            <div>
+
+            <!-- Certificate 2 -->
+            <div class="certificate">
                 <i class="fa-solid fa-microchip"></i>
                 <h2>CMOS & Verilog Certification</h2>
                 <p>Hands-on training in CMOS and Verilog during a summer internship at NIT Raipur.</p>
                 <a href="NITR intern.jpg" target="_blank" class="btn btn2">View</a>
             </div>
 
-            
-                        <div class="certificate extra-certificate hidden">
+            <!-- Extra Certificates (hidden by default) -->
+            <div class="certificate extra hidden">
                 <i class="fa-solid fa-network-wired"></i>
-                <h2>..........</h2>
-                <p>...........</p>
+                <h2>Networking Basics</h2>
+                <p>Certification in networking and cybersecurity fundamentals.</p>
                 <a href="Networking.jpg" target="_blank" class="btn btn2">View</a>
             </div>
-            <div class="certificate extra-certificate hidden">
+            <div class="certificate extra hidden">
                 <i class="fa-solid fa-brain"></i>
-                <h2>..............</h2>
-                <p>...........</p>
+                <h2>AI & Machine Learning</h2>
+                <p>Training on AI models and ML algorithms.</p>
                 <a href="AI_ML.jpg" target="_blank" class="btn btn2">View</a>
             </div>
         </div>
-        <button class="see-more-btn" id="toggle-button" onclick="toggleCertificates()">See More</button>
-        </div>
+        <!-- See More Button -->
+        <button class="see-more-btn" onclick="toggleSection('certificates')">See More</button>
     </div>
 </div>
 
 
        <!--portfolio-->
-       <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="web-developement.jpg">
-                    <div class="layer">
-                        <h3>Wheather Forcasting</h3>
-                        <p>It shows the Weather of any area or locality.</p>
-                        <a href="https://hitiknayak.github.io/weather-app/"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="python.jpg">
-                    <div class="layer">
-                        <h3>Password Generator</h3>
-                        <p>It generate strong pasword using Python.</p>
-                        <a href="https://www.linkedin.com/posts/hitik-kumar-nayak_softnetix-internship-webdevelopment-activity-7190707346942185472-3Ae1?utm_source=share&utm_medium=member_desktop"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="matlab.jpg">
-                    <div class="layer">
-                        <h3>Shannon Fano's Capacitnce</h3>
-                        <p>It shows the calculation & visualization of Shannon Capacitance.</p>
-                        <a href="Shannon C work.jpg"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                            
-                <div class="work extra-work hidden">
-                <img src="frontend.jpg">
+      <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list" id="work-content">
+            <!-- Project 1 -->
+            <div class="work">
+                <img src="web-developement.jpg">
                 <div class="layer">
-                    <h3>...........</h3>
-                    <p>...........</p>
-                    <a href="frontend.jpg" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <h3>Weather Forecasting</h3>
+                    <p>Shows the weather of any area or locality.</p>
+                    <a href="https://hitiknayak.github.io/weather-app/"><i class="fa-solid fa-link"></i></a>
                 </div>
-               </div>
-               <div class="work extra-work hidden">
-                <img src="flutter.jpg">
-                <div class="layer">
-                    <h3>,........</h3>
-                    <p>...........</p>
-                    <a href="flutter.jpg" target="_blank"><i class="fa-solid fa-link"></i></a>
-                </div>
-              </div>
-             </div>
-        <button class="see-more-btn" id="portfolio-toggle" onclick="togglePortfolio()">See More</button>
+            </div>
 
-            
+            <!-- Project 2 -->
+            <div class="work">
+                <img src="python.jpg">
+                <div class="layer">
+                    <h3>Password Generator</h3>
+                    <p>Generates strong passwords using Python.</p>
+                    <a href="https://www.linkedin.com/posts/hitik-kumar-nayak_softnetix-internship-webdevelopment-activity-7190707346942185472-3Ae1?utm_source=share&utm_medium=member_desktop"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+
+            <!-- Extra Projects (hidden by default) -->
+            <div class="work extra hidden">
+                <img src="matlab.jpg">
+                <div class="layer">
+                    <h3>Shannon Fano's Capacitance</h3>
+                    <p>Calculates and visualizes Shannon Capacitance.</p>
+                    <a href="Shannon C work.jpg"><i class="fa-solid fa-link"></i></a>
+                </div>
             </div>
         </div>
-       </div>
+        <!-- See More Button -->
+        <button class="see-more-btn" onclick="toggleSection('work')">See More</button>
+    </div>
+</div>
 
        <!--contact-->
        <div id="contact">
@@ -229,35 +218,23 @@
             }
         </script>
         
-    <script>
-function togglePortfolio() {
-    const extraWorks = document.querySelectorAll('.extra-work');
-    const button = document.getElementById('portfolio-toggle');
 
-    extraWorks.forEach(work => {
-        work.classList.toggle('hidden');
+
+        <script>
+function toggleSection(sectionId) {
+    const contentDiv = document.getElementById(`${sectionId}-content`);
+    const hiddenItems = contentDiv.querySelectorAll('.extra');
+    const button = contentDiv.nextElementSibling;
+
+    hiddenItems.forEach(item => {
+        item.classList.toggle('hidden');
     });
 
     button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
 }
 </script>
-
 
         
-        <script>
-function toggleCertificates() {
-    const extraCertificates = document.querySelectorAll('.extra-certificate');
-    const button = document.getElementById('certificates-toggle');
-
-    extraCertificates.forEach(certificate => {
-        certificate.classList.toggle('hidden');
-    });
-
-    button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
-}
-</script>
-
-
 
         <script>
             var sidemenu = document.getElementById("sidemenu");
