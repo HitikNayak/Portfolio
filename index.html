@@ -1,296 +1,553 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">        
-        <title>Hitik Kumar Nayak | PORTFOLIO</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="hkn logo.jpg" class="logo">
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#certificates">Certificate</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fas fa-times" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fas fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class="header-text">
-                    <p>Message from designer</p>
-                    <h1>Hello, I'm <span>Hitik</span><br>Kumar Nayak</h1>
-                </div>
-            </div>
-        </div>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hitik Kumar Nayak | Research Portfolio</title>
 
-        <!--- About Section -->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="Photo HITIK.jpg">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>I have experience with Web development, signal processing, and MATLAB, and enjoy problem-solving in both programming and engineering contexts.<br>I'm proactive, having worked on projects like Shannon capacity calculations and internships, where I’ve gained practical insights.<br>My interests lie in mastering technical skills and expanding my knowledge base.</p>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f4f7fb;
+    color: #222;
+}
 
-                        <div class="tab-titles">
-                            <div class="tab-links active-link" onclick="opentab(this, 'skills')">Skills</div>
-                            <div class="tab-links" onclick="opentab(this, 'internships')">Internships</div>
-                            <div class="tab-links" onclick="opentab(this, 'education')">Education</div>
-                        </div>
-                        <div class="tab-contains active-tab" id="skills">
-                            <ul>
-                                <li><span>MATLAB</span><br>6g Channel Bandwidth</li>
-                                <li><span>CMOS</span><br>Hybrid full adder using LT spice</li>
-                                <li><span>Web Development</span><br>Weather App <br>Japan Job recruit website</li>
-                                <li><span>Python</span><br>Password Generator <br>MCQ answering</li>
-                                <li><span>Content Writing</span><br>Fluctuation of Stock Market</li>
-                            </ul>
-                        </div>
+header {
+    background: linear-gradient(135deg,#003366,#0055aa);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
 
-                        <div class="tab-contains" id="internships">
-                            <ul>
-                                <li><span>NIT Raipur (CMOS)</span><br>Hybrid full adder using LT spice</li>
-                                <li><span>Softnetix (Python)</span><br>Password Generator <br>MCQ answering</li>
-                            </ul>
-                        </div>
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
 
-                        <div class="tab-contains" id="education">
-                            <ul>
-                                <li><span>2019</span><br>Matric (CBSE)</li>
-                                <li><span>2021</span><br>Intermediate (CBSE)</li>
-                                <li><span>2021-25</span><br>ECE B.Tech from Guru Ghasidas University</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
 
-<!---Certificates-->
-<div id="certificates">
-    <div class="container">
-        <h1 class="sub-title">My Certificates</h1>
-        <div class="certificates-list" id="certificates-content">
-            <!-- Certificate 1 -->
-            <div class="certificate">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h2>Python Development</h2>
-                <p>Completed a virtual internship focused on Python applications, including password generation.</p>
-                <a href="SOFTNETIX intern.jpg" target="_blank" class="btn btn2">View</a>
-            </div>
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
 
-            <!-- Certificate 2 -->
-            <div class="certificate">
-                <i class="fa-solid fa-microchip"></i>
-                <h2>CMOS & Verilog Certification</h2>
-                <p>Hands-on training in CMOS and Verilog during a summer internship at NIT Raipur.</p>
-                <a href="NITR intern.jpg" target="_blank" class="btn btn2">View</a>
-            </div>
+.section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
 
-            <!-- Extra Certificates (hidden by default) -->
-            <div class="certificate extra hidden">
-                <i class="fa-solid fa-network-wired"></i>
-                <h2>............................</h2>
-                <p>.............................</p>
-                <a href="Networking.jpg" target="_blank" class="btn btn2">View</a>
-            </div>
-            <div class="certificate extra hidden">
-                <i class="fa-solid fa-brain"></i>
-                <h2>...........................</h2>
-                <p>............................</p>
-                <a href="AI_ML.jpg" target="_blank" class="btn btn2">View</a>
-            </div>
-        </div>
-        <!-- See More Button -->
-        <button class="see-more-btn" onclick="toggleSection('certificates')">See More</button>
-    </div>
+.section h2 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #f9fbff;
+    border-left: 5px solid #0055aa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    background: #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.skill-box {
+    display: inline-block;
+    background: #e6f0ff;
+    padding: 6px 10px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #003366;
+    color: white;
+    margin-top: 20px;
+}
+
+@media (max-width:768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Hitik Kumar Nayak</h1>
+<p>Graduate Engineer | VLSI Research Enthusiast | PhD Aspirant</p>
+<p>Email: hitikkumarnayak22@gmail.com | Phone: +91-7978594517</p>
+<p>GitHub: github.com/hitiknayak | Portfolio: hitiknayak.github.io</p>
+</header>
+
+<div class="container">
+
+<!-- Research Interests -->
+<div class="section">
+<h2>Research Interests</h2>
+<p>
+VLSI Design, Analog CMOS Circuits, IO Pad Ring Design, LVS/DRC Verification, Parasitic Extraction (PEX), Semiconductor Devices, Low Power VLSI, Embedded Systems, 6G Communication Systems
+</p>
 </div>
 
-
-       <!--portfolio-->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list" id="work-content">
-            <!-- Project 1 -->
-            <div class="work">
-                <img src="web-developement.jpg">
-                <div class="layer">
-                    <h3>Weather Forecasting</h3>
-                    <p>Shows the weather of any area or locality.</p>
-                    <a href="https://hitiknayak.github.io/weather-app/"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="work">
-                <img src="python.jpg">
-                <div class="layer">
-                    <h3>Password Generator</h3>
-                    <p>Generates strong passwords using Python.</p>
-                    <a href="https://www.linkedin.com/posts/hitik-kumar-nayak_softnetix-internship-webdevelopment-activity-7190707346942185472-3Ae1?utm_source=share&utm_medium=member_desktop"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-
-            <!-- Extra Projects (hidden by default) -->
-            <div class="work extra hidden">
-                <img src="matlab.jpg">
-                <div class="layer">
-                    <h3>Shannon Fano's Capacitance</h3>
-                    <p>Calculates and visualizes Shannon Capacitance.</p>
-                    <a href="Shannon C work.jpg"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-        </div>
-        <!-- See More Button -->
-        <button class="see-more-btn" onclick="toggleSection('work')">See More</button>
-    </div>
+<!-- Education -->
+<div class="section">
+<h2>Education</h2>
+<p><strong>B.Tech in Electronics and Communication Engineering</strong></p>
+<p>Guru Ghasidas Vishwavidyalaya (GGU), Bilaspur</p>
+<p>CGPA: 7.62</p>
 </div>
 
+<!-- Professional Experience -->
+<div class="section">
+<h2>Professional Experience</h2>
 
-       <!--contact-->
-       <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <!-- Email Link with Icon -->
-                       <p>
-                            <a href="mailto:hitikkumarnayak22@gmail.com" class="email-link">
-                            <i class="fa-solid fa-paper-plane"></i> hitikkumarnayak22@gmail.com
-                            </a>
-                      </p>
-    
-                    <!-- Phone Link with Icon -->
-                        <p>
-                            <a href="tel:+917978594517" class="phone-link">
-                            <i class="fa-solid fa-phone"></i> +91 7978594517
-                            </a>
-                       </p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/hitik-kumar-nayak/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/HitikN"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.instagram.com/hitik_nayak02"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@hitik_kumar_nayak"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <a href="Hitik CV.pdf" target="_blank" class="btn btn2">View CV</a>
-                    <a href="Hitik CV.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright @ Hitik Kumar Nayak</p>
-        </div>
-       </div>
+<div class="grid-2">
 
+<div>
+<h3>Project Assistant — ABV-IIITM Gwalior</h3>
+<p><strong>Project:</strong> Implantable Pacemaker Chip (iPACE-CHIP)</p>
+<ul>
+<li>Working with VLSI EDA tools</li>
+<li>Supporting schematic and layout verification</li>
+<li>Coordinating with ChipIN Centre and C-DAC Bangalore</li>
+</ul>
+</div>
 
-        <!-- JavaScript -->
-        <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontains = document.getElementsByClassName("tab-contains");
+<div>
+<h3>Graduate Engineer Trainee — MSP Steel & Power Ltd.</h3>
+<ul>
+<li>Working in electrical system operations</li>
+<li>Monitoring industrial electrical equipment</li>
+<li>Supporting plant maintenance operations</li>
+</ul>
+</div>
 
-            function opentab(element, tabname) {
-                for (let tablink of tablinks) {
-                    tablink.classList.remove("active-link");
-                }
-                for (let tabcontain of tabcontains) {
-                    tabcontain.classList.remove("active-tab");
-                }
-                element.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
-            }
-        </script>
-        
+</div>
+</div>
 
+<!-- Projects -->
+<div class="section">
+<h2>Key VLSI and Research Projects</h2>
 
-        <script>
-function toggleSection(sectionId) {
-    const contentDiv = document.getElementById(`${sectionId}-content`);
-    const hiddenItems = contentDiv.querySelectorAll('.extra');
-    const button = contentDiv.nextElementSibling;
+<div class="project-grid">
 
-    hiddenItems.forEach(item => {
-        item.classList.toggle('hidden');
-    });
+<div class="project-card">
+<img src="" alt="IO Pad Ring Image Placeholder">
+<h3>IO Pad Ring Design</h3>
+<ul>
+<li>Designed IO Pad Ring using Cadence Virtuoso</li>
+<li>Created symbol and testbench</li>
+<li>Performed DRC and LVS verification</li>
+<li>Validated pad connectivity</li>
+</ul>
+</div>
 
-    button.textContent = button.textContent === 'See More' ? 'See Less' : 'See More';
+<div class="project-card">
+<img src="" alt="Analog CMOS Image Placeholder">
+<h3>Analog CMOS Amplifier Design</h3>
+<ul>
+<li>Designed Common Source Amplifier</li>
+<li>Performed pre-layout and post-layout analysis</li>
+<li>Executed Parasitic Extraction (PEX)</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="Full Adder Image Placeholder">
+<h3>Hybrid Full Adder Design</h3>
+<ul>
+<li>Designed 20T Hybrid Full Adder</li>
+<li>Calculated delay and PDP</li>
+<li>Analyzed transistor-level performance</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="6G MATLAB Image Placeholder">
+<h3>6G Communication System Analysis</h3>
+<ul>
+<li>Analyzed multiple frequency bands</li>
+<li>Simulated signal loss and latency</li>
+<li>Generated MATLAB performance graphs</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- Skills -->
+<div class="section">
+<h2>Technical Skills</h2>
+
+<div class="skill-box">Cadence Virtuoso</div>
+<div class="skill-box">LTSpice</div>
+<div class="skill-box">MATLAB</div>
+<div class="skill-box">Python</div>
+<div class="skill-box">C Programming</div>
+<div class="skill-box">DRC</div>
+<div class="skill-box">LVS</div>
+<div class="skill-box">PEX</div>
+<div class="skill-box">Analog Design</div>
+<div class="skill-box">CMOS Circuits</div>
+
+</div>
+
+<!-- Internships -->
+<div class="section">
+<h2>Internships</h2>
+
+<ul>
+<li><strong>VLSI Intern — NIT Raipur</strong>
+<ul>
+<li>Worked on CMOS inverter and FINFET design</li>
+<li>Designed Hybrid Full Adder</li>
+<li>Studied CMOS scaling</li>
+</ul>
+</li>
+
+<li><strong>Python Programming Intern — Softnetix</strong>
+<ul>
+<li>Developed password generator</li>
+<li>Built quiz-based application</li>
+</ul>
+</li>
+
+<li><strong>Web Development Intern — Cognifyz Technology</strong>
+<ul>
+<li>Developed HTML, CSS, JavaScript webpages</li>
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+<!-- Exams -->
+<div class="section">
+<h2>Examinations and Qualifications</h2>
+
+<ul>
+<li>GATE 2026 — Score: 434 (ECE)</li>
+<li>TCS NQT December 2025 — Qualified</li>
+<li>Google Analytics Certification — Great Learning</li>
+</ul>
+
+</div>
+
+<!-- Workflow -->
+<div class="section">
+<h2>Cadence Design Workflow</h2>
+
+<ol>
+<li>Schematic Design</li>
+<li>Symbol Creation</li>
+<li>Testbench Setup</li>
+<li>Functional Simulation</li>
+<li>Layout Design</li>
+<li>Design Rule Check (DRC)</li>
+<li>Layout Versus Schematic (LVS)</li>
+<li>Parasitic Extraction (PEX)</li>
+<li>Post Layout Simulation</li>
+</ol>
+
+</div>
+
+<!-- Achievements -->
+<div class="section">
+<h2>Achievements and Activities</h2>
+
+<ul>
+<li>Campus Ambassador — IMUN</li>
+<li>Participant — SUSTAIN-A-THON 2024 (IOCL)</li>
+<li>Selected for multiple internships</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- Project Images Section -->
+<div class="section">
+<h2>Project Images and Design Results</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<img src="" alt="Schematic Design Placeholder">
+<h3>Schematic Design</h3>
+<ul>
+<li>Analog CMOS schematic implementation</li>
+<li>Functional connectivity verification</li>
+<li>Prepared for simulation testing</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="Layout Design Placeholder">
+<h3>Layout Design</h3>
+<ul>
+<li>Physical layout implementation</li>
+<li>Metal routing and device placement</li>
+<li>Design rule compliant structure</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="LVS Result Placeholder">
+<h3>LVS Verification</h3>
+<ul>
+<li>Layout Versus Schematic validation</li>
+<li>Connectivity correctness check</li>
+<li>Error-free matching verification</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="PEX Result Placeholder">
+<h3>Parasitic Extraction (PEX)</h3>
+<ul>
+<li>Extracted parasitic components</li>
+<li>Generated extracted netlist</li>
+<li>Used for post-layout simulation</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="IO Pad Ring Placeholder">
+<h3>IO Pad Ring Design</h3>
+<ul>
+<li>Pad placement and ring formation</li>
+<li>Power and ground connectivity</li>
+<li>Validated complete pad structure</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- Waveform and Testbench Section -->
+<div class="section">
+<h2>Waveform and Testbench Results</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<img src="" alt="Testbench Setup Placeholder">
+<h3>Testbench Setup</h3>
+<ul>
+<li>Designed functional testbench circuits</li>
+<li>Configured input stimulus conditions</li>
+<li>Verified operational functionality</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="Waveform Output Placeholder">
+<h3>Simulation Waveforms</h3>
+<ul>
+<li>Observed input-output waveform response</li>
+<li>Validated timing characteristics</li>
+<li>Ensured correct signal propagation</li>
+</ul>
+</div>
+
+<div class="project-card">
+<img src="" alt="Post Layout Simulation Placeholder">
+<h3>Post-Layout Simulation</h3>
+<ul>
+<li>Performed simulation after PEX</li>
+<li>Compared pre and post layout results</li>
+<li>Verified circuit performance accuracy</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- GitHub Projects Section -->
+<div class="section">
+<h2>GitHub Projects and Research Repository</h2>
+
+<ul>
+<li><strong>IO Pad Ring Design Repository</strong> — Contains schematic, layout, LVS and PEX documentation</li>
+<li><strong>Analog CMOS Amplifier Design</strong> — Includes simulation setup and waveform results</li>
+<li><strong>Hybrid Full Adder Design</strong> — LTSpice circuit implementation files</li>
+<li><strong>6G MATLAB Analysis</strong> — MATLAB scripts and generated performance plots</li>
+</ul>
+
+<p><strong>GitHub Profile:</strong> https://github.com/hitiknayak</p>
+
+</div>
+
+<!-- Publications and Research Work Section -->
+<div class="section">
+<h2>Publications and Research Work</h2>
+
+<ul>
+<li>Literature Survey on 6G Wireless Communication Systems — Analysis of frequency bands, signal loss and latency behavior</li>
+<li>Research Support Work — Implantable Pacemaker Chip (iPACE-CHIP) under MeitY C2S Project</li>
+<li>Technical Documentation — Cadence Design Workflow including DRC, LVS and PEX validation reports</li>
+</ul>
+
+</div>
+
+<!-- Download CV Section -->
+<div class="section">
+<h2>Download Curriculum Vitae</h2>
+
+<p>You can download my detailed Academic CV using the link below:</p>
+
+<a href="cv.pdf" download style="display:inline-block;padding:10px 15px;background:#0055aa;color:white;border-radius:6px;text-decoration:none;font-weight:bold;">
+Download CV (PDF)
+</a>
+
+</div>
+
+<!-- Project Timeline Section -->
+<div class="section">
+<h2>Project Timeline</h2>
+
+<ul>
+<li><strong>2023:</strong> Hybrid Full Adder Design using LTSpice simulation environment</li>
+<li><strong>2024:</strong> Analog CMOS Amplifier schematic and simulation development</li>
+<li><strong>2025:</strong> IO Pad Ring Design including layout, LVS and PEX verification</li>
+<li><strong>2025:</strong> 6G Wireless Communication MATLAB analysis and signal study</li>
+<li><strong>2025–Present:</strong> Research support in Implantable Pacemaker Chip (iPACE-CHIP) Project</li>
+</ul>
+
+</div>
+
+<!-- Research Summary Section -->
+<div class="section">
+<h2>Research Summary of VLSI Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>IO Pad Ring Design Research</h3>
+<ul>
+<li>Focused on pad placement optimization and power distribution</li>
+<li>Implemented full verification workflow including DRC, LVS and PEX</li>
+<li>Ensured robust connectivity and design validation</li>
+</ul>
+</div>
+
+<div class="project-card">
+<h3>Analog CMOS Amplifier Research</h3>
+<ul>
+<li>Designed analog amplifier circuits using CMOS technology</li>
+<li>Analyzed gain and stability parameters</li>
+<li>Validated performance through waveform simulation</li>
+</ul>
+</div>
+
+<div class="project-card">
+<h3>Hybrid Full Adder Research</h3>
+<ul>
+<li>Developed optimized arithmetic circuit using hybrid logic</li>
+<li>Performed functional testing using LTSpice</li>
+<li>Compared logic efficiency and propagation delay</li>
+</ul>
+</div>
+
+<div class="project-card">
+<h3>6G MATLAB Research</h3>
+<ul>
+<li>Studied high-frequency signal propagation models</li>
+<li>Simulated communication behavior using MATLAB</li>
+<li>Analyzed latency and signal loss trends</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<!-- Technology Stack Icons Section -->
+<div class="section">
+<h2>Technology Stack</h2>
+
+<ul>
+<li>🧠 Cadence Virtuoso — Schematic and Layout Design</li>
+<li>🔍 LVS/DRC Tools — Design Rule and Connectivity Verification</li>
+<li>⚡ Parasitic Extraction (PEX) — Post Layout Analysis</li>
+<li>📈 MATLAB — Communication and Signal Processing Simulation</li>
+<li>🔧 LTSpice — Analog and Digital Circuit Simulation</li>
+<li>💻 HTML/CSS — Research Portfolio Development</li>
+</ul>
+
+</div>
+
+<!-- Dark Mode Toggle Section -->
+<div class="section">
+<h2>Display Settings</h2>
+
+<button onclick="toggleDarkMode()" style="padding:10px 15px;background:#333;color:white;border:none;border-radius:6px;cursor:pointer;">
+Toggle Dark Mode
+</button>
+
+</div>
+
+<script>
+function toggleDarkMode() {
+ document.body.classList.toggle("dark-mode");
 }
 </script>
 
-        
+<style>
+.dark-mode {
+ background-color: #121212;
+ color: white;
+}
 
-        <script>
-            var sidemenu = document.getElementById("sidemenu");
-    
-            function openmenu() {
-                sidemenu.style.right = "0";
-            }
-    
-            function closemenu() {
-                sidemenu.style.right = "-200px";
-            }
-        </script>
+.dark-mode .section {
+ background-color: #1e1e1e;
+}
 
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbx3LEbeNwVQDSbWNZQHnJOHPJa_KGAAEzG27jISCwDfPGhdfd4aldDYZQoD7mb3kJZQAw/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const msg = document.getElementById("msg")
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function(){
-                        msg.innerHTML = ""
-                    },5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-            })
-         </script>
+.dark-mode .project-card {
+ background-color: #2a2a2a;
+}
+</style>
 
-          
+<footer>
+<p>Research Portfolio | Prepared for PhD Applications (IIT Hyderabad and other institutes)</p>
+</footer>
 
-
-
-
- 
-
-    </body>
+</body>
 </html>
