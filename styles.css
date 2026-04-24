@@ -1,211 +1,259 @@
-body {
+<!DOCTYPE html>
+<html lang="en">
 
-font-family: Arial;
-margin: 0;
-background: #f4f6f9;
+<head>
 
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html {
+<title>Hitik Nayak | VLSI Research Portfolio</title>
 
-scroll-behavior: smooth;
+<link rel="stylesheet" href="styles.css">
 
-}
+</head>
 
-/* Header */
+<body>
 
-header {
+<!-- =========================
+ Navigation Menu
+========================= -->
 
-display: flex;
-align-items: center;
-justify-content: center;
+<nav>
 
-gap: 20px;
+<ul>
 
-background: #0055aa;
-color: white;
+<li><a href="#about">About</a></li>
+<li><a href="#summary">Research Summary</a></li>
+<li><a href="#timeline">Timeline</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
 
-padding: 20px;
+</ul>
 
-}
+<button id="darkToggle">
+🌙 Dark Mode
+</button>
 
-.profile-photo {
+</nav>
 
-width: 120px;
-height: 150px;
+<!-- =========================
+ Header Section
+========================= -->
 
-object-fit: cover;
+<header>
 
-border-radius: 8px;
+<img src="images/passport.jpg"
+class="profile-photo">
 
-border: 3px solid white;
+<div class="header-text">
 
-}
+<h1>Hitik Kumar Nayak</h1>
 
-/* Navbar */
+<p>VLSI Research Portfolio</p>
 
-.navbar {
+<p>Electronics and Communication Engineering</p>
 
-background: #0055aa;
-position: sticky;
-top: 0;
+</div>
 
-}
+</header>
 
-.navbar ul {
+<!-- =========================
+ About Section
+========================= -->
 
-display: flex;
-justify-content: center;
+<section id="about">
 
-list-style: none;
+<h2>About Me</h2>
 
-margin: 0;
-padding: 0;
+<p>
 
-}
+Project Assistant at ABV-IIITM Gwalior under MeitY C2S Project.
+Working on Implantable Pacemaker Chip (iPACE-CHIP).
+Experienced in Cadence Virtuoso design flow including
+schematic, layout, LVS, DRC, PEX and IO Pad Ring Design.
 
-.navbar a {
+</p>
 
-color: white;
-padding: 14px 20px;
+</section>
 
-display: block;
+<!-- =========================
+ Research Summary
+========================= -->
 
-text-decoration: none;
+<section id="summary">
 
-}
+<h2>Research Summary</h2>
 
-.navbar a:hover {
+<p>
 
-background: #003f7f;
+My research focuses on Analog and Mixed Signal VLSI
+Design. I have worked on full custom CMOS design flow
+including schematic creation, layout implementation,
+verification using LVS and DRC, parasitic extraction
+(PEX), and IO Pad Ring Design.
 
-}
+</p>
 
-/* Sections */
+</section>
 
-.section {
+<!-- =========================
+ Project Timeline
+========================= -->
 
-background: white;
+<section id="timeline">
 
-margin: 20px;
-padding: 20px;
+<h2>Project Timeline</h2>
 
-border-radius: 10px;
+<div class="timeline">
 
-box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+<div class="timeline-item">
 
-}
+<h3>2024 — NIT Raipur</h3>
 
-.section h2 {
+<p>
+Hybrid Full Adder Design using LTSpice
+</p>
 
-color: #0055aa;
+</div>
 
-}
+<div class="timeline-item">
 
-/* Projects */
+<h3>2025 — ABV-IIITM</h3>
 
-.project-grid {
+<p>
+Pacemaker Chip (iPACE-CHIP)
+</p>
 
-display: grid;
+</div>
 
-grid-template-columns:
-repeat(auto-fit, minmax(250px,1fr));
+</div>
 
-gap: 20px;
+</section>
 
-}
+<!-- =========================
+ Projects Section
+========================= -->
 
-.project-card {
+<section id="projects">
 
-background: #fafafa;
+<h2>VLSI Project Showcase</h2>
 
-padding: 15px;
+<div class="project-grid">
 
-border-radius: 10px;
+<div class="project-card">
 
-border-left: 5px solid #0055aa;
+<h3>Schematic Design</h3>
 
-}
+<img src="images/schematic.png">
 
-.project-card img {
+</div>
 
-width: 100%;
-height: 180px;
+<div class="project-card">
 
-object-fit: cover;
+<h3>Layout Design</h3>
 
-border-radius: 8px;
+<img src="images/layout.png">
 
-}
+</div>
 
-/* Button */
+<div class="project-card">
 
-a[download] {
+<h3>LVS Verification</h3>
 
-background: #0055aa;
+<img src="images/lvs.png">
 
-color: white;
+</div>
 
-padding: 10px 16px;
+<div class="project-card">
 
-border-radius: 6px;
+<h3>PEX Extraction</h3>
 
-text-decoration: none;
+<img src="images/pex.png">
 
-}
+</div>
 
-/* Footer */
+<div class="project-card">
 
-footer {
+<h3>IO Pad Ring</h3>
 
-text-align: center;
+<img src="images/iopadring.png">
 
-background: #0055aa;
+</div>
 
-color: white;
+</div>
 
-padding: 15px;
+</section>
 
-}
+<!-- =========================
+ Certificates Section
+========================= -->
 
-/* Dark Mode */
+<section id="certificates">
 
-.dark-mode {
+<h2>Certificates</h2>
 
-background: #121212;
-color: white;
+<div class="certificate-grid">
 
-}
+<div class="certificate-card">
 
-.dark-mode .section {
+<h3>Softnetix Internship</h3>
 
-background: #1e1e1e;
+<img src="images/cert_softnetix.jpg">
 
-}
+<p>
+Python Programming Internship.
+Created Password Generator and Quiz Game.
+</p>
 
-.dark-mode .project-card {
+</div>
 
-background: #2a2a2a;
+<div class="certificate-card">
 
-}
+<h3>NIT Raipur Internship</h3>
 
-.dark-toggle {
+<img src="images/cert_nit_raipur.jpg">
 
-position: fixed;
+<p>
+Hybrid Full Adder Design using LTSpice.
+</p>
 
-bottom: 20px;
-right: 20px;
+</div>
 
-padding: 12px;
+<div class="certificate-card">
 
-background: #0055aa;
+<h3>ABV-IIITM Gwalior</h3>
 
-color: white;
+<img src="images/cert_abv_iiitm.jpg">
 
-border: none;
+<p>
+Project Assistant — Pacemaker Chip Project.
+</p>
 
-border-radius: 50px;
+</div>
 
-cursor: pointer;
+</div>
 
-}
+</section>
+
+<!-- =========================
+ Contact Section
+========================= -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: hitikkumarnayak22@gmail.com</p>
+
+<p>GitHub: github.com/hitiknayak</p>
+
+<p>LinkedIn: linkedin.com/in/hitik-kumar-nayak</p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
