@@ -1,541 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
 
-<meta charset="UTF-8">
+<title>Hitik Kumar Nayak Portfolio</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-Hitik Kumar Nayak | Portfolio
-</title>
-
-<link rel="stylesheet"
-href="styles.css">
-
-<link rel="manifest"
-href="manifest.json">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- Scroll Progress -->
+<!-- HEADER -->
 
-<div id="scrollBar"></div>
+<header>
 
-<!-- Loader -->
+<img src="images/profile.jpg" class="profile">
 
-<div id="loader">
-
-<div class="spinner"></div>
-
-<p>Loading Portfolio...</p>
-
-</div>
-
-<!-- NAVBAR -->
-
-<nav>
-
-<h2 class="logo">
-Hitik Portfolio
-</h2>
-
-<button
-class="menu-toggle"
-onclick="toggleMenu()">
-
-☰
-
-</button>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#timeline">Experience</a></li>
-<li><a href="#certificates">Certificates</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-<button id="darkToggle">
-🌙
-</button>
-
-</nav>
-
-<!-- HERO -->
-
-<header id="home">
-
-<img src="photo.jpg"
-class="profile-photo">
-
-<h1>
-
-<span id="typing"></span>
-
-</h1>
+<h1>Hitik Kumar Nayak</h1>
 
 <p>
-
-VLSI | Analog Design | Research
-
-</p>
-
-<p>
-
-Project Assistant – ABV-IIITM Gwalior  
-Graduate Engineer Trainee – MSP Steel & Power Ltd.
-
-</p>
-
-<a href="resume.pdf"
-target="_blank"
-class="btn">
-
-View Resume
-
-</a>
-
-<a href="resume.pdf"
-download
-class="btn"
-onclick="countDownload()">
-
-Download Resume
-
-</a>
-
-<p>
-
-Resume Downloads:
-<span id="downloadCount">0</span>
-
+B.Tech ECE | VLSI Enthusiast | Project Assistant – ABV-IIITM Gwalior
 </p>
 
 </header>
 
-<!-- PROJECTS -->
 
-<section id="projects">
+<!-- ABOUT -->
 
-<h2>Projects</h2>
+<section>
 
-<div class="projects-grid">
-
-<div class="project-card vlsi">
-
-<img src="projects/fulladder.jpg"
-onclick="openModal(this.src)">
-
-<h3>Hybrid 20T Full Adder</h3>
+<h2>About Me</h2>
 
 <p>
-Designed using LTSpice with delay and PDP analysis.
+
+I am Hitik Kumar Nayak, a B.Tech Electronics and Communication
+Engineering graduate with strong interest in VLSI Design,
+Analog Circuits and Semiconductor Research.
+
+Currently working as Project Assistant at ABV-IIITM Gwalior
+under MeitY-sponsored C2S Project on Implantable Pacemaker Chip.
+
 </p>
-
-</div>
-
-<div class="project-card vlsi">
-
-<img src="projects/opamp.jpg"
-onclick="openModal(this.src)">
-
-<h3>Two Stage Opamp</h3>
-
-<p>
-Designed in Cadence Virtuoso.
-</p>
-
-</div>
-
-<div class="project-card research">
-
-<img src="projects/6g.jpg"
-onclick="openModal(this.src)">
-
-<h3>6G Channel Capacity</h3>
-
-<p>
-Optimization using MATLAB simulation.
-</p>
-
-</div>
-
-<div class="project-card python">
-
-<img src="projects/password.jpg"
-onclick="openModal(this.src)">
-
-<h3>Password Generator</h3>
-
-<p>
-Strong password generator using Python.
-</p>
-
-</div>
-
-<div class="project-card web">
-
-<img src="projects/japanjob.jpg"
-onclick="openModal(this.src)">
-
-<h3>Japan Job Website</h3>
-
-<p>
-HTML CSS JavaScript based job portal.
-</p>
-
-</div>
-
-</div>
 
 </section>
 
-<!-- SKILLS -->
 
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skills-container">
-
-<div class="skill">
-
-<p>Cadence Virtuoso</p>
-
-<div class="progress">
-
-<div class="progress-bar"
-style="width:90%"></div>
-
-</div>
-
-</div>
-
-<div class="skill">
-
-<p>Analog Design</p>
-
-<div class="progress">
-
-<div class="progress-bar"
-style="width:85%"></div>
-
-</div>
-
-</div>
-
-<div class="skill">
-
-<p>Python</p>
-
-<div class="progress">
-
-<div class="progress-bar"
-style="width:80%"></div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- EDUCATION -->
 
-<section id="education">
+<section>
 
 <h2>Education</h2>
 
-<div class="education-box">
+<div class="card">
 
 <h3>
-B.Tech Electronics & Communication Engineering
+B.Tech — Electronics & Communication Engineering
 </h3>
 
 <p>
-Guru Ghasidas University Bilaspur
+Guru Ghasidas University, Bilaspur
+</p>
+
+<p>
+CGPA: <b>7.62 / 10</b>
+</p>
+
+<p>
+Year: 2025
 </p>
 
 </div>
 
 </section>
 
-<!-- CADENCE FLOW -->
 
-<section id="cadence">
 
-<h2>Cadence Flow Gallery</h2>
+<!-- EXAM -->
 
-<div class="cadence-grid">
+<section>
 
-<img src="cadence/schematic.jpg"
-onclick="openModal(this.src)">
+<h2>Examinations</h2>
 
-<img src="cadence/layout.jpg"
-onclick="openModal(this.src)">
+<div class="card">
 
-<img src="cadence/drc.jpg"
-onclick="openModal(this.src)">
+<h3>TCS NQT Cognitive Exam</h3>
 
-<img src="cadence/lvs.jpg"
-onclick="openModal(this.src)">
+<p>
 
-<img src="cadence/pex.jpg"
-onclick="openModal(this.src)">
+Subjects Covered:
+Aptitude, Logical Reasoning,
+Numerical Ability, Verbal Ability
+
+</p>
 
 </div>
 
 </section>
 
-<!-- TIMELINE -->
 
-<section id="timeline">
 
-<h2>Experience Timeline</h2>
+<!-- INTERNSHIPS -->
 
-<div class="timeline">
+<section>
 
-<div class="timeline-item">
+<h2>Internships</h2>
 
-<h3>
-Project Assistant — ABV-IIITM Gwalior
-</h3>
+<div class="card">
+
+<h3>Project Assistant — ABV-IIITM Gwalior</h3>
 
 <p>
-Working on iPACE-CHIP design project.
+
+Working on Implantable Pacemaker Chip (iPACE-CHIP)
+under MeitY C2S Project.
+
+Responsibilities:
+
+EDA Tools  
+Schematic Design  
+Layout Verification  
+Research Support  
+
 </p>
 
 </div>
 
-<div class="timeline-item">
 
-<h3>
-Graduate Engineer Trainee — MSP Steel
-</h3>
+<div class="card">
+
+<h3>Intern — NIT Raipur</h3>
 
 <p>
-Electrical maintenance and systems.
+
+Designed Hybrid Full Adder using LT Spice.
+
+Worked on:
+
+CMOS Inverter  
+FINFET Design  
+Delay Analysis  
+Power Calculation  
+
 </p>
 
 </div>
 
-<div class="timeline-item">
 
-<h3>
-Intern — NIT Raipur
-</h3>
+<div class="card">
+
+<h3>Python Intern — Softnetix</h3>
 
 <p>
-Hybrid Full Adder design.
-</p>
 
-</div>
+Developed:
+
+Password Generator  
+Quiz Game Application  
+
+</p>
 
 </div>
 
 </section>
+
+
+
+<!-- PROJECTS -->
+
+<section>
+
+<h2>Projects</h2>
+
+<div class="card">
+
+<h3>Two Stage Operational Amplifier Design</h3>
+
+<p>
+
+Designed schematic and layout using Cadence Virtuoso.
+
+Completed:
+
+DRC  
+LVS  
+PEX  
+Post-layout Simulation  
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>IO Pad Ring Design</h3>
+
+<p>
+
+Designed IO Pad Ring for chip integration
+using Cadence tools.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section>
+
+<h2>Skills</h2>
+
+<div class="card">
+
+<p>
+
+Cadence Virtuoso  
+LT Spice  
+VLSI Design  
+Analog Circuits  
+HTML  
+CSS  
+JavaScript  
+Python  
+
+</p>
+
+</div>
+
+</section>
+
+
 
 <!-- CERTIFICATES -->
 
-<section id="certificates">
+<section>
 
 <h2>Certificates</h2>
 
 <div class="certificate-grid">
 
-<div class="certificate">
-
 <img src="certificates/latex.jpg"
 onclick="openModal(this.src)">
 
-<p>
-LaTeX Technical Writing — GGU
-</p>
+<img src="certificates/google.jpg"
+onclick="openModal(this.src)">
 
-</div>
+<img src="certificates/python.jpg"
+onclick="openModal(this.src)">
 
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact-box">
-
-<p>📞 7978594517</p>
-
-<p>
-📧 hitikkumarnayak22@gmail.com
-</p>
-
-<p>
-
-GitHub:
-<a href="https://github.com/HitikNayak"
-target="_blank">
-
-github.com/HitikNayak
-
-</a>
-
-</p>
-
-<p>
-
-LinkedIn:
-<a href="https://in.linkedin.com/in/hitik-kumar-nayak"
-target="_blank">
-
-linkedin.com/in/hitik-kumar-nayak
-
-</a>
-
-</p>
-
-<p>
-
-Instagram:
-<a href="https://www.instagram.com/hitik_nayak02/"
-target="_blank">
-
-Instagram Profile
-
-</a>
-
-</p>
-
-<p>
-
-YouTube:
-<a href="https://www.youtube.com/@hitik_kumar_nayak"
-target="_blank">
-
-YouTube Channel
-
-</a>
-
-</p>
-
-<p>
-
-Facebook:
-<a href="https://www.facebook.com/hitikkumar.nayak/"
-target="_blank">
-
-Facebook Profile
-
-</a>
-
-</p>
+<img src="certificates/imun.jpg"
+onclick="openModal(this.src)">
 
 </div>
 
 </section>
 
-<!-- RESUME PREVIEW -->
 
-<section id="resume">
 
-<h2>Resume Preview</h2>
+<!-- INVOICE VIEWER -->
 
-<div class="resume-box">
+<section>
 
-<iframe
-src="resume.pdf"
-width="100%"
-height="500px">
+<h2>Invoice (JSON Viewer)</h2>
 
-</iframe>
+<button onclick="loadInvoice()">
 
-</div>
+Load Invoice
 
-</section>
+</button>
 
-<!-- VISITOR COUNTER -->
-
-<section id="visitor">
-
-<h2>Visitor Counter</h2>
-
-<a href="https://www.hitwebcounter.com/"
-target="_blank">
-
-<img src="https://hitwebcounter.com/counter/counter.php?page=21492170&style=0001&nbdigits=5&type=page&initCount=0"
-style="border:0;" />
-
-</a>
+<pre id="invoiceBox"></pre>
 
 </section>
 
-<!-- FLOATING BUTTON -->
 
-<a href="https://wa.me/917978594517"
-class="floating-btn"
-target="_blank">
 
-💬
+<!-- MODAL IMAGE -->
 
-</a>
-
-<!-- MODAL -->
-
-<div id="imageModal"
-class="modal">
-
-<span
-class="close"
+<div id="modal"
 onclick="closeModal()">
 
-×
-
-</span>
-
-<img
-class="modal-content"
-id="modalImg">
+<img id="modalImg">
 
 </div>
 
-<!-- FOOTER -->
 
-<footer>
-
-<p>
-
-© 2026 Hitik Kumar Nayak  
-All Rights Reserved
-
-</p>
-
-</footer>
-
-<!-- JS LINK -->
 
 <script src="script.js"></script>
-
-<script>
-
-if ('serviceWorker' in navigator) {
-
-navigator.serviceWorker
-.register('service-worker.js');
-
-}
-
-</script>
 
 </body>
 
