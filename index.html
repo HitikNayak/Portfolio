@@ -94,16 +94,18 @@ color: white;
 border: none;
 border-radius: 5px;
 cursor: pointer;
+margin: 5px;
 }
 
 button:hover {
 background: #005fa3;
 }
 
-pre {
-background: white;
-padding: 10px;
-border-radius: 6px;
+/* COUNTER */
+
+#counter {
+font-size: 16px;
+margin-top: 10px;
 }
 
 </style>
@@ -123,6 +125,22 @@ border-radius: 6px;
 <p>
 B.Tech ECE | VLSI Enthusiast | Project Assistant – ABV-IIITM Gwalior
 </p>
+
+<!-- RESUME BUTTONS -->
+
+<a href="resume.pdf" target="_blank">
+<button>View Resume</button>
+</a>
+
+<a href="resume.pdf" download>
+<button>Download Resume</button>
+</a>
+
+<!-- VISITOR COUNTER -->
+
+<div id="counter">
+Visitors: <span id="visitCount">0</span>
+</div>
 
 </header>
 
@@ -365,22 +383,6 @@ onclick="openModal(this.src)">
 
 </section>
 
-<!-- JSON INVOICE -->
-
-<section>
-
-<h2>Invoice (JSON Viewer)</h2>
-
-<button onclick="loadInvoice()">
-Load Invoice
-</button>
-
-<pre id="invoiceBox"></pre>
-
-</section>
-
-
-
 <!-- MODAL -->
 
 <div id="modal"
@@ -411,33 +413,22 @@ document.getElementById("modal").style.display="none";
 }
 
 
-/* JSON LOAD */
+/* VISITOR COUNTER */
 
-function loadInvoice(){
+if(localStorage.visitCount){
 
-var invoice = {
-
-invoice_number: "INV001",
-
-name: "Hitik Kumar Nayak",
-
-role: "Project Assistant",
-
-organization: "ABV-IIITM Gwalior",
-
-project: "iPACE-CHIP",
-
-amount: "₹15000",
-
-status: "Paid"
-
-};
-
-document.getElementById("invoiceBox")
-.textContent =
-JSON.stringify(invoice,null,2);
+localStorage.visitCount =
+Number(localStorage.visitCount) + 1;
 
 }
+else{
+
+localStorage.visitCount = 1;
+
+}
+
+document.getElementById("visitCount")
+.textContent = localStorage.visitCount;
 
 </script>
 
