@@ -24,11 +24,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </head>
 
 <body>
-
-<!-- SCROLL PROGRESS BAR -->
-
 <div id="progressBar"></div>
-
 <header>
 
 <nav class="navbar">
@@ -40,28 +36,19 @@ Hitik Kumar Nayak
 <ul class="nav-links">
 
 <li><a href="#home">Home</a></li>
-
 <li><a href="#about">About</a></li>
-
 <li><a href="#projects">Projects</a></li>
-
 <li><a href="#workflow">Workflow</a></li>
-
 <li><a href="#research">Research</a></li>
-
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
-<!-- DARK LIGHT MODE -->
-
-<div class="theme-toggle">
+<!-- DARK LIGHT TOGGLE -->
 
 <button id="themeToggle">
 🌙
 </button>
-
-</div>
 
 </nav>
 
@@ -84,11 +71,7 @@ alt="Profile Photo">
 <h1>
 
 Hello, I'm  
-<span>
-
-Hitik Kumar Nayak
-
-</span>
+<span>Hitik Kumar Nayak</span>
 
 </h1>
 
@@ -118,7 +101,6 @@ Download Resume
 </div>
 
 </section>
-
 <section id="about"
 class="about reveal">
 
@@ -139,7 +121,6 @@ and PEX verification.
 </p>
 
 </section>
-
 <section id="skills"
 class="skills reveal">
 
@@ -182,58 +163,37 @@ Python, MATLAB
 </div>
 
 </section>
-
 <section id="projects"
 class="projects reveal">
 
 <h2 class="section-title">
-
 Projects
-
 </h2>
 
 <div class="filter-buttons">
 
-<button onclick="filterProjects('all')">
-All
-</button>
-
-<button onclick="filterProjects('analog')">
-Analog
-</button>
-
-<button onclick="filterProjects('digital')">
-Digital
-</button>
-
-<button onclick="filterProjects('layout')">
-Layout
-</button>
+<button onclick="filterProjects('all')">All</button>
+<button onclick="filterProjects('analog')">Analog</button>
+<button onclick="filterProjects('digital')">Digital</button>
+<button onclick="filterProjects('layout')">Layout</button>
 
 </div>
 
 <div class="project-container">
-
 <div class="project-box analog">
 
-<h3>
-Two-Stage CMOS Amplifier
-</h3>
+<h3>Two-Stage CMOS Amplifier</h3>
 
 <img src="images/amplifier_layout.png">
 
 <p>
-
-Designed CMOS amplifier using
-Cadence Virtuoso.
-
+Cadence Virtuoso design.
 </p>
 
 <a href="https://github.com/hitiknayak"
-target="_blank"
-class="github-btn">
+target="_blank">
 
-View on GitHub
+GitHub
 
 </a>
 
@@ -241,24 +201,18 @@ View on GitHub
 
 <div class="project-box digital">
 
-<h3>
-Hybrid Full Adder
-</h3>
+<h3>Hybrid Full Adder</h3>
 
 <img src="images/full_adder.png">
 
 <p>
-
-Designed Hybrid Full Adder
-using LT-Spice.
-
+LT-Spice design.
 </p>
 
 <a href="https://github.com/hitiknayak"
-target="_blank"
-class="github-btn">
+target="_blank">
 
-View on GitHub
+GitHub
 
 </a>
 
@@ -267,288 +221,126 @@ View on GitHub
 </div>
 
 </section>
-
 <section id="iopad"
 class="iopad reveal">
 
 <h2 class="section-title">
-
 IO Pad Ring Gallery
-
 </h2>
 
 <div class="iopad-gallery">
 
 <img src="images/iopad1.png">
-
 <img src="images/iopad2.png">
-
 <img src="images/iopad3.png">
-
 <img src="images/iopad4.png">
 
 </div>
 
 </section>
-
 <section id="workflow"
 class="workflow reveal">
 
 <h2 class="section-title">
-
 Cadence Workflow Timeline
-
 </h2>
 
 <div class="timeline">
 
-<div class="timeline-item">
-
-<h3>Schematic Design</h3>
-
-<p>
-Created amplifier schematic.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>Layout Design</h3>
-
-<p>
-Designed layout structure.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>DRC Check</h3>
-
-<p>
-Verified design rules.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>LVS Check</h3>
-
-<p>
-Matched layout & schematic.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>PEX Extraction</h3>
-
-<p>
-Generated extracted netlist.
-</p>
-
-</div>
+<div class="timeline-item">Schematic Design</div>
+<div class="timeline-item">Layout Design</div>
+<div class="timeline-item">DRC Check</div>
+<div class="timeline-item">LVS Check</div>
+<div class="timeline-item">PEX Extraction</div>
 
 </div>
 
 </section>
-
 <section id="verification"
 class="verification reveal">
 
 <h2 class="section-title">
-
 Verification Results
-
 </h2>
 
 <div class="verification-gallery">
 
 <div class="verify-box">
-
-<h3>DRC Result</h3>
-
 <img src="images/drc_clean.png">
-
 </div>
 
 <div class="verify-box">
-
-<h3>LVS Result</h3>
-
 <img src="images/lvs_matched.png">
-
 </div>
 
 <div class="verify-box">
-
-<h3>PEX Result</h3>
-
 <img src="images/pex_output.png">
-
 </div>
 
 </div>
 
 </section>
-
-<section id="comparison"
-class="comparison reveal">
-
-<h2 class="section-title">
-
-Pre vs Post Layout
-
-</h2>
-
-<div class="comparison-gallery">
-
-<img src="images/pre_post_gain.png">
-
-<img src="images/pre_post_bw.png">
-
-<img src="images/pre_post_power.png">
-
-</div>
-
-</section>
-
 <section id="research"
 class="research reveal">
 
 <h2 class="section-title">
-
 Research Interests
-
 </h2>
 
 <div class="research-container">
 
 <div class="research-box">
-
-<h3>VLSI Design</h3>
-
-<p>
-Analog & Mixed Signal IC
-</p>
-
+VLSI Design
 </div>
 
 <div class="research-box">
-
-<h3>Physical Design</h3>
-
-<p>
-Layout & Verification
-</p>
-
+Physical Design
 </div>
 
 <div class="research-box">
-
-<h3>Biomedical IC</h3>
-
-<p>
-Implantable Devices
-</p>
-
+Biomedical IC
 </div>
 
 </div>
 
 </section>
-
 <section id="contact"
 class="contact reveal">
 
 <h2 class="section-title">
-
 Contact Me
-
 </h2>
 
-<p>
+<p>Email: hitikkumarnayak22@gmail.com</p>
+<p>Phone: +91 7978594517</p>
 
-Email:
-hitikkumarnayak22@gmail.com
-
-</p>
-
-<p>
-
-Phone:
-+91 7978594517
-
-</p>
-
-<div class="linkedin-section">
-
-<a href="https://linkedin.com/"
-target="_blank"
-class="linkedin-btn">
-
-<i class="fab fa-linkedin"></i>
-
-LinkedIn Profile
-
-</a>
-
-</div>
-
-<form action="https://formspree.io/f/yourID"
-method="POST">
+<form>
 
 <input type="text"
-name="name"
-placeholder="Your Name"
-required>
+placeholder="Name">
 
 <input type="email"
-name="email"
-placeholder="Your Email"
-required>
+placeholder="Email">
 
-<textarea name="message"
-placeholder="Message"
-required>
-</textarea>
+<textarea placeholder="Message"></textarea>
 
-<button type="submit"
-class="btn">
-
-Send Message
-
-</button>
+<button class="btn">Send</button>
 
 </form>
 
 </section>
-
-<!-- IMAGE POPUP -->
-
 <div id="imagePopup"
 class="popup">
 
-<span id="closePopup">
-
-×
-
-</span>
+<span id="closePopup">×</span>
 
 <img id="popupImg">
 
 </div>
-
 <footer>
 
 <p>
-
-© 2026 Hitik Kumar Nayak  
-All Rights Reserved
-
+© 2026 Hitik Kumar Nayak
 </p>
 
 </footer>
@@ -558,3 +350,4 @@ All Rights Reserved
 </body>
 
 </html>
+
