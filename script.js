@@ -1,100 +1,187 @@
 /* =========================
-LOADER ANIMATION
+   MOBILE MENU TOGGLE
 ========================= */
 
-window.addEventListener("load", function () {
+function toggleMenu() {
 
-document.getElementById("loader")
-.style.display = "none";
+document.querySelector("nav ul")
+.classList.toggle("active");
 
-});
+}
 
 
 /* =========================
-DARK MODE TOGGLE 🌙
+   DARK MODE TOGGLE 🌙
 ========================= */
 
-const toggle =
+const darkToggle =
 document.getElementById("darkToggle");
 
-toggle.onclick = function () {
+if(darkToggle){
+
+darkToggle.onclick = function(){
 
 document.body.classList.toggle("dark");
 
+/* Save Mode */
+
+if(document.body.classList.contains("dark")){
+
+localStorage.setItem("theme","dark");
+
+}
+else{
+
+localStorage.setItem("theme","light");
+
+}
+
+};
+
+}
+
+
+/* Load Saved Theme */
+
+window.onload = function(){
+
+if(localStorage.getItem("theme") === "dark"){
+
+document.body.classList.add("dark");
+
+}
+
+/* Show Download Count */
+
+if(localStorage.downloadCount){
+
+document.getElementById("downloadCount")
+.textContent =
+localStorage.downloadCount;
+
+}
+
 };
 
 
+
 /* =========================
-TYPING ANIMATION ⌨️
+   TYPING EFFECT ⌨️
 ========================= */
 
-const text =
-"Hi, I'm Hitik Kumar Nayak";
+var text =
+"Hi, I'm Hitik Kumar Nayak — VLSI & Analog Design Engineer";
 
-let index = 0;
+var i = 0;
 
-function typeEffect() {
+function typing(){
 
-if (index < text.length) {
+var typingElement =
+document.getElementById("typing");
 
-document.getElementById("typing")
-.innerHTML += text.charAt(index);
+if(typingElement){
 
-index++;
+if(i < text.length){
 
-setTimeout(typeEffect, 80);
+typingElement.innerHTML +=
+text.charAt(i);
+
+i++;
+
+setTimeout(typing, 60);
 
 }
 
 }
 
-typeEffect();
+}
+
+typing();
+
 
 
 /* =========================
-SCROLL PROGRESS BAR
+   SCROLL PROGRESS BAR
 ========================= */
 
-window.onscroll = function () {
+window.onscroll = function(){
 
-let winScroll =
+var winScroll =
 document.body.scrollTop ||
 document.documentElement.scrollTop;
 
-let height =
+var height =
 document.documentElement.scrollHeight -
 document.documentElement.clientHeight;
 
-let scrolled =
+var scrolled =
 (winScroll / height) * 100;
 
-document.getElementById("scrollBar")
-.style.width = scrolled + "%";
+var bar =
+document.getElementById("scrollBar");
+
+if(bar){
+
+bar.style.width =
+scrolled + "%";
+
+}
 
 };
 
 
+
 /* =========================
-PROJECT FILTERING
+   IMAGE MODAL VIEWER
 ========================= */
 
-function filterProjects(category) {
+function openModal(src){
 
-let cards =
+var modal =
+document.getElementById("modal");
+
+var img =
+document.getElementById("modalImg");
+
+modal.style.display = "flex";
+
+img.src = src;
+
+}
+
+function closeModal(){
+
+document.getElementById("modal")
+.style.display = "none";
+
+}
+
+
+
+/* =========================
+   PROJECT FILTER
+========================= */
+
+function filterProjects(category){
+
+var cards =
 document.querySelectorAll(".project-card");
 
-cards.forEach(card => {
+cards.forEach(function(card){
 
-if (
-category === "all" ||
-card.classList.contains(category)
-) {
+if(category === "all"){
 
 card.style.display = "block";
 
 }
 
-else {
+else if(card.classList.contains(category)){
+
+card.style.display = "block";
+
+}
+
+else{
 
 card.style.display = "none";
 
@@ -105,55 +192,34 @@ card.style.display = "none";
 }
 
 
-/* =========================
-IMAGE MODAL POPUP
-========================= */
-
-function openModal(src) {
-
-document.getElementById("imageModal")
-.style.display = "block";
-
-document.getElementById("modalImg")
-.src = src;
-
-}
-
-function closeModal() {
-
-document.getElementById("imageModal")
-.style.display = "none";
-
-}
-
 
 /* =========================
-CERTIFICATE SEARCH
+   CERTIFICATE SEARCH
 ========================= */
 
-function searchCertificates() {
+function searchCertificates(){
 
-let input =
+var input =
 document.getElementById("certificateSearch");
 
-let filter =
+var filter =
 input.value.toLowerCase();
 
-let certs =
+var certs =
 document.querySelectorAll(".certificate");
 
-certs.forEach(cert => {
+certs.forEach(function(cert){
 
-let text =
+var text =
 cert.innerText.toLowerCase();
 
-if (text.includes(filter)) {
+if(text.includes(filter)){
 
 cert.style.display = "block";
 
 }
 
-else {
+else{
 
 cert.style.display = "none";
 
@@ -164,29 +230,56 @@ cert.style.display = "none";
 }
 
 
+
 /* =========================
-ANIMATED COUNTERS
+   RESUME DOWNLOAD COUNTER
 ========================= */
 
-const counters =
+function countDownload(){
+
+if(localStorage.downloadCount){
+
+localStorage.downloadCount =
+Number(localStorage.downloadCount) + 1;
+
+}
+else{
+
+localStorage.downloadCount = 1;
+
+}
+
+document.getElementById("downloadCount")
+.textContent =
+localStorage.downloadCount;
+
+}
+
+
+
+/* =========================
+   ANIMATED COUNTERS
+========================= */
+
+var counters =
 document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
+counters.forEach(function(counter){
 
 counter.innerText = "0";
 
-const updateCounter = () => {
+var updateCounter = function(){
 
-const target =
+var target =
 +counter.getAttribute("data-target");
 
-const count =
+var count =
 +counter.innerText;
 
-const increment =
+var increment =
 target / 100;
 
-if (count < target) {
+if(count < target){
 
 counter.innerText =
 Math.ceil(count + increment);
@@ -194,8 +287,7 @@ Math.ceil(count + increment);
 setTimeout(updateCounter, 20);
 
 }
-
-else {
+else{
 
 counter.innerText = target;
 
@@ -208,206 +300,66 @@ updateCounter();
 });
 
 
+
 /* =========================
-RESUME DOWNLOAD COUNTER
+   LOADER ANIMATION
 ========================= */
 
-function countDownload() {
+window.addEventListener("load", function(){
 
-let count =
-localStorage.getItem("downloads");
+var loader =
+document.getElementById("loader");
 
-if (!count) {
+if(loader){
 
-count = 0;
-
-}
-
-count++;
-
-localStorage.setItem(
-"downloads",
-count
-);
-
-document.getElementById(
-"downloadCount"
-).innerText = count;
+loader.style.display = "none";
 
 }
 
+});
 
-/* Load stored count */
-
-window.onload = function () {
-
-let count =
-localStorage.getItem("downloads");
-
-if (count) {
-
-document.getElementById(
-"downloadCount"
-).innerText = count;
-
-}
-
-};
 
 
 /* =========================
-MOBILE MENU
+   FLOATING CONTACT BUTTON
 ========================= */
 
-function toggleMenu() {
+function scrollToContact(){
 
-document.querySelector("nav ul")
-.classList.toggle("show");
+document.getElementById("contact")
+.scrollIntoView({
 
-}
-
-
-/* =========================
-GITHUB AUTO PROJECT LOADER
-========================= */
-
-async function loadGitHubProjects() {
-
-try {
-
-let response =
-await fetch(
-"https://api.github.com/users/HitikNayak/repos"
-);
-
-let repos =
-await response.json();
-
-let container =
-document.querySelector(
-".projects-grid"
-);
-
-repos.slice(0,3).forEach(repo => {
-
-let div =
-document.createElement("div");
-
-div.className =
-"project-card web";
-
-div.innerHTML = `
-
-<h3>
-${repo.name}
-</h3>
-
-<p>
-${repo.description || "GitHub Project"}
-</p>
-
-<a href="${repo.html_url}"
-target="_blank">
-
-View Project
-
-</a>
-
-`;
-
-container.appendChild(div);
+behavior: "smooth"
 
 });
 
 }
 
-catch(error) {
-
-console.log(
-"GitHub Load Failed"
-);
-
-}
-
-}
-
-loadGitHubProjects();
 
 
 /* =========================
-CADENCE FLOW ANIMATION 🧠
+   SIMPLE VISITOR COUNTER
+(Local Counter)
 ========================= */
 
-const cadenceImages =
-document.querySelectorAll(
-".cadence-grid img"
-);
+if(localStorage.visits){
 
-cadenceImages.forEach(img => {
+localStorage.visits =
+Number(localStorage.visits) + 1;
 
-img.addEventListener(
-"mouseover",
-function(){
+}
+else{
 
-this.style.transform =
-"scale(1.05)";
+localStorage.visits = 1;
 
 }
 
-);
+var visitDisplay =
+document.getElementById("visitorCount");
 
-img.addEventListener(
-"mouseout",
-function(){
+if(visitDisplay){
 
-this.style.transform =
-"scale(1)";
-
-}
-
-);
-
-});
-
-
-/* =========================
-SCROLL REVEAL EFFECT
-========================= */
-
-window.addEventListener(
-"scroll",
-reveal
-);
-
-function reveal() {
-
-let reveals =
-document.querySelectorAll(
-"section"
-);
-
-reveals.forEach(section => {
-
-let windowHeight =
-window.innerHeight;
-
-let elementTop =
-section.getBoundingClientRect()
-.top;
-
-let elementVisible = 150;
-
-if (
-elementTop <
-windowHeight - elementVisible
-) {
-
-section.style.opacity = 1;
-section.style.transform =
-"translateY(0)";
-
-}
-
-});
+visitDisplay.textContent =
+localStorage.visits;
 
 }
