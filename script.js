@@ -1,365 +1,150 @@
-/* =========================
-   MOBILE MENU TOGGLE
-========================= */
+const toggleBtn = document.getElementById("themeToggle");
 
-function toggleMenu() {
+toggleBtn.addEventListener("click", () => {
 
-document.querySelector("nav ul")
-.classList.toggle("active");
+document.body.classList.toggle("light-mode");
 
-}
+toggleBtn.textContent =
+document.body.classList.contains("light-mode")
+? "☀️"
+: "🌙";
 
+localStorage.setItem(
+"theme",
+document.body.classList.contains("light-mode")
+? "light"
+: "dark"
+);
 
-/* =========================
-   DARK MODE TOGGLE 🌙
-========================= */
+});
 
-const darkToggle =
-document.getElementById("darkToggle");
+window.addEventListener("load", () => {
 
-if(darkToggle){
+if (localStorage.getItem("theme") === "light") {
 
-darkToggle.onclick = function(){
+document.body.classList.add("light-mode");
 
-document.body.classList.toggle("dark");
-
-/* Save Mode */
-
-if(document.body.classList.contains("dark")){
-
-localStorage.setItem("theme","dark");
-
-}
-else{
-
-localStorage.setItem("theme","light");
+toggleBtn.textContent = "☀️";
 
 }
 
-};
+});
+const textArray = [
+"VLSI Designer",
+"Analog Circuit Engineer",
+"Cadence Virtuoso User",
+"Physical Design Enthusiast"
+];
 
-}
+let i = 0, j = 0;
 
+function type() {
 
-/* Load Saved Theme */
+let typing = document.getElementById("typing-text");
 
-window.onload = function(){
+if (!typing) return;
 
-if(localStorage.getItem("theme") === "dark"){
+if (j < textArray[i].length) {
 
-document.body.classList.add("dark");
+typing.textContent += textArray[i][j];
 
-}
+j++;
 
-/* Show Download Count */
+setTimeout(type, 80);
 
-if(localStorage.downloadCount){
+} else {
 
-document.getElementById("downloadCount")
-.textContent =
-localStorage.downloadCount;
-
-}
-
-};
-
-
-
-/* =========================
-   TYPING EFFECT ⌨️
-========================= */
-
-var text =
-"Hi, I'm Hitik Kumar Nayak — VLSI & Analog Design Engineer";
-
-var i = 0;
-
-function typing(){
-
-var typingElement =
-document.getElementById("typing");
-
-if(typingElement){
-
-if(i < text.length){
-
-typingElement.innerHTML +=
-text.charAt(i);
-
-i++;
-
-setTimeout(typing, 60);
+setTimeout(erase, 1500);
 
 }
 
 }
 
+function erase() {
+
+let typing = document.getElementById("typing-text");
+
+if (j > 0) {
+
+typing.textContent = textArray[i].substring(0, j - 1);
+
+j--;
+
+setTimeout(erase, 40);
+
+} else {
+
+i = (i + 1) % textArray.length;
+
+setTimeout(type, 500);
+
 }
 
-typing();
+}
 
+window.onload = type;
+function filterProjects(category) {
 
+let projects = document.querySelectorAll(".project-box");
 
-/* =========================
-   SCROLL PROGRESS BAR
-========================= */
+projects.forEach(p => {
 
-window.onscroll = function(){
+if (category === "all") {
 
-var winScroll =
+p.style.display = "block";
+
+} else {
+
+p.style.display =
+p.classList.contains(category)
+? "block"
+: "none";
+
+}
+
+});
+
+}
+window.onscroll = function () {
+
+let winScroll =
 document.body.scrollTop ||
 document.documentElement.scrollTop;
 
-var height =
+let height =
 document.documentElement.scrollHeight -
 document.documentElement.clientHeight;
 
-var scrolled =
+let scrolled =
 (winScroll / height) * 100;
 
-var bar =
-document.getElementById("scrollBar");
-
-if(bar){
-
-bar.style.width =
+document.getElementById("progressBar").style.width =
 scrolled + "%";
 
-}
-
 };
 
+const images = document.querySelectorAll("img");
 
+const popup = document.getElementById("imagePopup");
 
-/* =========================
-   IMAGE MODAL VIEWER
-========================= */
+const popupImg = document.getElementById("popupImg");
 
-function openModal(src){
+const closePopup = document.getElementById("closePopup");
 
-var modal =
-document.getElementById("modal");
+images.forEach(img => {
 
-var img =
-document.getElementById("modalImg");
+img.addEventListener("click", () => {
 
-modal.style.display = "flex";
+popup.style.display = "flex";
 
-img.src = src;
-
-}
-
-function closeModal(){
-
-document.getElementById("modal")
-.style.display = "none";
-
-}
-
-
-
-/* =========================
-   PROJECT FILTER
-========================= */
-
-function filterProjects(category){
-
-var cards =
-document.querySelectorAll(".project-card");
-
-cards.forEach(function(card){
-
-if(category === "all"){
-
-card.style.display = "block";
-
-}
-
-else if(card.classList.contains(category)){
-
-card.style.display = "block";
-
-}
-
-else{
-
-card.style.display = "none";
-
-}
+popupImg.src = img.src;
 
 });
 
-}
-
-
-
-/* =========================
-   CERTIFICATE SEARCH
-========================= */
-
-function searchCertificates(){
-
-var input =
-document.getElementById("certificateSearch");
-
-var filter =
-input.value.toLowerCase();
-
-var certs =
-document.querySelectorAll(".certificate");
-
-certs.forEach(function(cert){
-
-var text =
-cert.innerText.toLowerCase();
-
-if(text.includes(filter)){
-
-cert.style.display = "block";
-
-}
-
-else{
-
-cert.style.display = "none";
-
-}
-
 });
 
-}
+closePopup.addEventListener("click", () => {
 
-
-
-/* =========================
-   RESUME DOWNLOAD COUNTER
-========================= */
-
-function countDownload(){
-
-if(localStorage.downloadCount){
-
-localStorage.downloadCount =
-Number(localStorage.downloadCount) + 1;
-
-}
-else{
-
-localStorage.downloadCount = 1;
-
-}
-
-document.getElementById("downloadCount")
-.textContent =
-localStorage.downloadCount;
-
-}
-
-
-
-/* =========================
-   ANIMATED COUNTERS
-========================= */
-
-var counters =
-document.querySelectorAll(".counter");
-
-counters.forEach(function(counter){
-
-counter.innerText = "0";
-
-var updateCounter = function(){
-
-var target =
-+counter.getAttribute("data-target");
-
-var count =
-+counter.innerText;
-
-var increment =
-target / 100;
-
-if(count < target){
-
-counter.innerText =
-Math.ceil(count + increment);
-
-setTimeout(updateCounter, 20);
-
-}
-else{
-
-counter.innerText = target;
-
-}
-
-};
-
-updateCounter();
+popup.style.display = "none";
 
 });
-
-
-
-/* =========================
-   LOADER ANIMATION
-========================= */
-
-window.addEventListener("load", function(){
-
-var loader =
-document.getElementById("loader");
-
-if(loader){
-
-loader.style.display = "none";
-
-}
-
-});
-
-
-
-/* =========================
-   FLOATING CONTACT BUTTON
-========================= */
-
-function scrollToContact(){
-
-document.getElementById("contact")
-.scrollIntoView({
-
-behavior: "smooth"
-
-});
-
-}
-
-
-
-/* =========================
-   SIMPLE VISITOR COUNTER
-(Local Counter)
-========================= */
-
-if(localStorage.visits){
-
-localStorage.visits =
-Number(localStorage.visits) + 1;
-
-}
-else{
-
-localStorage.visits = 1;
-
-}
-
-var visitDisplay =
-document.getElementById("visitorCount");
-
-if(visitDisplay){
-
-visitDisplay.textContent =
-localStorage.visits;
-
-}
