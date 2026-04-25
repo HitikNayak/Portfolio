@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,44 +10,52 @@
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Hitik Kumar Nayak | Portfolio
+Hitik Kumar Nayak | VLSI Portfolio
 </title>
 
 <link rel="stylesheet"
-href="styles.css">
+href="style.css">
 
 </head>
 
 <body>
 
-<!-- Scroll Progress -->
+<!-- SCROLL BAR -->
 
 <div id="scrollBar"></div>
+
+
+<!-- LOADER -->
+
+<div id="loader">
+
+<h2>Loading Portfolio...</h2>
+
+</div>
+
+
 
 <!-- NAVBAR -->
 
 <nav>
 
-<h2 class="logo">
-Hitik Portfolio
-</h2>
+<div class="logo">
 
-<button
-class="menu-toggle"
+Hitik Kumar Nayak
+
+</div>
+
+<div class="menu-btn"
 onclick="toggleMenu()">
 
 ☰
 
-</button>
+</div>
 
 <ul>
 
 <li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#projects">Projects</a>
+<a href="#about">About</a>
 </li>
 
 <li>
@@ -54,7 +63,11 @@ onclick="toggleMenu()">
 </li>
 
 <li>
-<a href="#timeline">Experience</a>
+<a href="#education">Education</a>
+</li>
+
+<li>
+<a href="#projects">Projects</a>
 </li>
 
 <li>
@@ -67,8 +80,11 @@ onclick="toggleMenu()">
 
 </ul>
 
+
 <button id="darkToggle">
+
 🌙
+
 </button>
 
 </nav>
@@ -77,42 +93,31 @@ onclick="toggleMenu()">
 
 <!-- HERO -->
 
-<header id="home">
+<section class="hero">
 
-<img src="photo.jpg"
-class="profile-photo">
-
-<h1>
-
-<span id="typing"></span>
-
-</h1>
-
-<p>
-
-VLSI | Analog Design | Research
-
-</p>
+<h1 id="typing"></h1>
 
 <p>
 
 Project Assistant — ABV-IIITM Gwalior  
-Graduate Engineer Trainee — MSP Steel & Power Ltd.
+Graduate Engineer Trainee — MSP Steel  
 
 </p>
 
 <a href="resume.pdf"
-target="_blank"
-class="btn">
+class="btn"
+target="_blank">
 
 View Resume
 
 </a>
 
+<br><br>
+
 <a href="resume.pdf"
 download
-class="btn"
-onclick="countDownload()">
+onclick="countDownload()"
+class="btn">
 
 Download Resume
 
@@ -120,151 +125,34 @@ Download Resume
 
 <p>
 
-Resume Downloads:
-
-<span id="downloadCount">
-0
-</span>
+Downloads:
+<span id="downloadCount">0</span>
 
 </p>
 
-</header>
+</section>
 
-<!-- STATS -->
 
-<section id="stats">
 
-<div class="stats-container">
+<!-- ABOUT -->
 
-<div class="stat-box">
+<section id="about">
 
-<h2 class="counter"
-data-target="5">0</h2>
+<h2>About Me</h2>
 
-<p>Projects</p>
+<div class="about-box">
 
-</div>
+<p>
 
-<div class="stat-box">
+I am Hitik Kumar Nayak, an Electronics and Communication Engineer passionate about VLSI Design, Analog Circuit Design, and Semiconductor Research. Currently working as a Project Assistant at ABV-IIITM Gwalior under MeitY-sponsored chip design project, focusing on schematic design, layout, LVS, DRC, and parasitic extraction using Cadence Virtuoso.
 
-<h2 class="counter"
-data-target="12">0</h2>
-
-<p>Certificates</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2 class="counter"
-data-target="3">0</h2>
-
-<p>Internships</p>
-
-</div>
-
-<div class="stat-box">
-
-<h2 class="counter"
-data-target="2">0</h2>
-
-<p>Jobs</p>
-
-</div>
+</p>
 
 </div>
 
 </section>
 
 
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects-grid">
-
-<div class="project-card vlsi">
-
-<img src="projects/fulladder.jpg"
-onclick="openModal(this.src)">
-
-<h3>
-Hybrid 20T Full Adder
-</h3>
-
-<p>
-Designed using LTSpice with delay and PDP analysis.
-</p>
-
-</div>
-
-<div class="project-card vlsi">
-
-<img src="projects/opamp.jpg"
-onclick="openModal(this.src)">
-
-<h3>
-Two Stage Operational Amplifier
-</h3>
-
-<p>
-Designed in Cadence Virtuoso with schematic,
-layout, DRC, LVS and PEX.
-</p>
-
-</div>
-
-<div class="project-card research">
-
-<img src="projects/6g.jpg"
-onclick="openModal(this.src)">
-
-<h3>
-Optimization of Channel Capacity of 6G
-</h3>
-
-<p>
-Analyzed frequency bands using MATLAB.
-</p>
-
-</div>
-
-<div class="project-card python">
-
-<img src="projects/password.jpg"
-onclick="openModal(this.src)">
-
-<h3>
-Python Strong Password Generator
-</h3>
-
-<p>
-Secure password generator using Python.
-</p>
-
-</div>
-
-<div class="project-card web">
-
-<img src="projects/japanjob.jpg"
-onclick="openModal(this.src)">
-
-<h3>
-Japan Job Recruitment Website
-</h3>
-
-<p>
-Built using HTML, CSS and JavaScript.
-</p>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- SKILLS -->
 
@@ -272,60 +160,84 @@ Built using HTML, CSS and JavaScript.
 
 <h2>Skills</h2>
 
-<div class="skills-container">
-
 <div class="skill">
-<p>Cadence Virtuoso</p>
-<div class="progress">
-<div class="progress-bar"
+
+<div class="skill-name">
+
+Cadence Virtuoso
+
+</div>
+
+<div class="skill-bar">
+
+<div class="skill-fill"
 style="width:90%">
-</div>
-</div>
+
 </div>
 
+</div>
+
+</div>
+
+
+
 <div class="skill">
-<p>Analog Design</p>
-<div class="progress">
-<div class="progress-bar"
+
+<div class="skill-name">
+
+Analog Design
+
+</div>
+
+<div class="skill-bar">
+
+<div class="skill-fill"
 style="width:85%">
-</div>
-</div>
+
 </div>
 
-<div class="skill">
-<p>VLSI Layout</p>
-<div class="progress">
-<div class="progress-bar"
-style="width:88%">
-</div>
-</div>
 </div>
 
+</div>
+
+
+
 <div class="skill">
-<p>Python Programming</p>
-<div class="progress">
-<div class="progress-bar"
+
+<div class="skill-name">
+
+CMOS Layout
+
+</div>
+
+<div class="skill-bar">
+
+<div class="skill-fill"
 style="width:80%">
-</div>
-</div>
+
 </div>
 
-<div class="skill">
-<p>HTML CSS JavaScript</p>
-<div class="progress">
-<div class="progress-bar"
-style="width:85%">
-</div>
-</div>
 </div>
 
+</div>
+
+
+
 <div class="skill">
-<p>MATLAB</p>
-<div class="progress">
-<div class="progress-bar"
-style="width:82%">
+
+<div class="skill-name">
+
+Python
+
 </div>
+
+<div class="skill-bar">
+
+<div class="skill-fill"
+style="width:75%">
+
 </div>
+
 </div>
 
 </div>
@@ -340,87 +252,21 @@ style="width:82%">
 
 <h2>Education</h2>
 
-<div class="education-box">
-
-<h3>
-B.Tech Electronics & Communication Engineering
-</h3>
-
-<p>
-Guru Ghasidas University, Bilaspur
-</p>
-
-<p>
-CGPA: 7.62 / 10
-</p>
-
-<p>
-Specialization:
-VLSI Design and Communication Systems
-</p>
-
-</div>
-
-</section>
-
-
-<!-- TIMELINE -->
-
-<section id="timeline">
-
-<h2>Experience Timeline</h2>
-
 <div class="timeline">
 
 <div class="timeline-item">
 
 <h3>
-Project Assistant — ABV-IIITM Gwalior
+
+B.Tech — Electronics & Communication Engineering
+
 </h3>
 
 <p>
-Working on Implantable Pacemaker Chip
-(iPACE-CHIP) under MeitY C2S Project.
-EDA tools, layout and verification.
-</p>
 
-</div>
+Guru Ghasidas University  
+CGPA: **7.62**
 
-<div class="timeline-item">
-
-<h3>
-Graduate Engineer Trainee —
-MSP Steel & Power Ltd.
-</h3>
-
-<p>
-Electrical maintenance and
-industrial system exposure.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-Intern — NIT Raipur
-</h3>
-
-<p>
-Hybrid Full Adder design using LTSpice.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-Python Intern — Softnetix
-</h3>
-
-<p>
-Developed password generator
-and quiz game.
 </p>
 
 </div>
@@ -428,6 +274,141 @@ and quiz game.
 </div>
 
 </section>
+
+
+
+<!-- PROJECT FILTER -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+
+<div class="filter-btns">
+
+<button onclick="filterProjects('all')">
+
+All
+
+</button>
+
+<button onclick="filterProjects('vlsi')">
+
+VLSI
+
+</button>
+
+<button onclick="filterProjects('python')">
+
+Python
+
+</button>
+
+</div>
+
+
+
+<div class="project-grid">
+
+
+<div class="project-card vlsi">
+
+<h3>
+
+Two Stage Op Amp Design
+
+</h3>
+
+<p>
+
+Schematic, Layout, LVS, DRC, PEX verification using Cadence.
+
+</p>
+
+</div>
+
+
+
+<div class="project-card python">
+
+<h3>
+
+Password Generator
+
+</h3>
+
+<p>
+
+Python-based strong password generator tool.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- CADENCE FLOW GALLERY -->
+
+<section id="cadence">
+
+<h2>Cadence Flow Gallery</h2>
+
+<div class="certificate-grid">
+
+
+<div class="certificate">
+
+<img src="images/schematic.png"
+onclick="openModal(this.src)">
+
+<p>Schematic</p>
+
+</div>
+
+
+
+<div class="certificate">
+
+<img src="images/layout.png"
+onclick="openModal(this.src)">
+
+<p>Layout</p>
+
+</div>
+
+
+
+<div class="certificate">
+
+<img src="images/lvs.png"
+onclick="openModal(this.src)">
+
+<p>LVS</p>
+
+</div>
+
+
+
+<div class="certificate">
+
+<img src="images/drc.png"
+onclick="openModal(this.src)">
+
+<p>DRC</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
 
 <!-- CERTIFICATES -->
 
@@ -435,55 +416,125 @@ and quiz game.
 
 <h2>Certificates</h2>
 
+<div class="search-box">
+
+<input
+type="text"
+id="certificateSearch"
+onkeyup="searchCertificates()"
+placeholder="Search Certificates...">
+
+</div>
+
+
 <div class="certificate-grid">
 
+
 <div class="certificate">
 
-<img src="certificates/latex.jpg"
+<img src="certificates/nit.png"
 onclick="openModal(this.src)">
 
 <p>
-LaTeX for Technical Writing — GGU
+
+NIT Raipur Internship
+
 </p>
 
 </div>
 
+
+
 <div class="certificate">
 
-<img src="certificates/google.jpg"
+<img src="certificates/python.png"
 onclick="openModal(this.src)">
 
 <p>
-Google Analytics Certification
+
+Softnetix Python Internship
+
 </p>
 
 </div>
 
+
+
 <div class="certificate">
 
-<img src="certificates/python.jpg"
+<img src="certificates/analytics.png"
 onclick="openModal(this.src)">
 
 <p>
-Python Programming Internship
+
+Google Analytics Certificate
+
 </p>
 
 </div>
 
-<div class="certificate">
-
-<img src="certificates/imun.jpg"
-onclick="openModal(this.src)">
-
-<p>
-IMUN Campus Ambassador Internship
-</p>
-
-</div>
 
 </div>
 
 </section>
+
+
+
+<!-- COUNTERS -->
+
+<section>
+
+<div class="counter-box">
+
+<div>
+
+<div class="counter"
+data-target="15">
+
+0
+
+</div>
+
+<p>Projects</p>
+
+</div>
+
+
+
+<div>
+
+<div class="counter"
+data-target="10">
+
+0
+
+</div>
+
+<p>Certificates</p>
+
+</div>
+
+
+
+<div>
+
+<div class="counter"
+data-target="500">
+
+0
+
+</div>
+
+<p>Visitors</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
 
 <!-- CONTACT -->
 
@@ -491,22 +542,75 @@ IMUN Campus Ambassador Internship
 
 <h2>Contact</h2>
 
+<div class="contact-box">
+
 <p>
+
 Email:
 hitikkumarnayak22@gmail.com
+
 </p>
 
 <p>
+
 Phone:
 +91 7978594517
+
 </p>
 
 <p>
+
 GitHub:
 github.com/hitiknayak
+
 </p>
 
+<p>
+
+Instagram:
+https://www.instagram.com/hitik_nayak02/
+
+</p>
+
+<p>
+
+YouTube:
+https://www.youtube.com/@hitik_kumar_nayak
+
+</p>
+
+<p>
+
+Facebook:
+https://www.facebook.com/hitikkumar.nayak/
+
+</p>
+
+<p>
+
+Visitor Count:
+<span id="visitorCount">
+
+0
+
+</span>
+
+</p>
+
+</div>
+
 </section>
+
+
+
+<!-- FLOATING BUTTON -->
+
+<div class="floating-btn"
+onclick="scrollToContact()">
+
+📩
+
+</div>
 
 
 
@@ -525,98 +629,19 @@ onclick="closeModal()">
 
 <footer>
 
-<p>
-
 © 2026 Hitik Kumar Nayak  
 VLSI | Analog Design | Research
 
-</p>
-
 </footer>
 
-<script>
-
-/* TYPING */
-
-var text =
-"Hi, I'm Hitik Kumar Nayak";
-
-var i = 0;
-
-function typing(){
-
-if(i < text.length){
-
-document.getElementById("typing")
-.innerHTML += text.charAt(i);
-
-i++;
-
-setTimeout(typing, 80);
-
-}
-
-}
-
-typing();
 
 
+<!-- SCRIPT -->
 
-/* MODAL */
-
-function openModal(src){
-
-document.getElementById("modal")
-.style.display="block";
-
-document.getElementById("modalImg")
-.src=src;
-
-}
-
-function closeModal(){
-
-document.getElementById("modal")
-.style.display="none";
-
-}
-
-
-
-/* DOWNLOAD COUNTER */
-
-function countDownload(){
-
-if(localStorage.downloadCount){
-
-localStorage.downloadCount =
-Number(localStorage.downloadCount)+1;
-
-}
-else{
-
-localStorage.downloadCount=1;
-
-}
-
-document.getElementById("downloadCount")
-.textContent =
-localStorage.downloadCount;
-
-}
-
-
-
-/* DARK MODE */
-
-document.getElementById("darkToggle")
-.onclick=function(){
-
-document.body.classList.toggle("dark");
-
-};
+<script src="script.js">
 
 </script>
 
 </body>
+
 </html>
