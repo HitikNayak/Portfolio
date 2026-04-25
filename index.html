@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -13,80 +12,63 @@
 /* BODY */
 
 body {
-
 font-family: Arial, sans-serif;
 margin: 0;
 background: #f4f4f4;
-
 }
 
 /* HEADER */
 
 header {
-
 background: #0077cc;
 color: white;
 text-align: center;
 padding: 20px;
-
 }
 
 .profile {
-
 width: 120px;
 border-radius: 50%;
 margin-bottom: 10px;
-
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section {
-
 padding: 20px;
-
 }
 
 h2 {
-
 color: #0077cc;
-
 }
 
-/* CARDS */
+/* CARD */
 
 .card {
-
 background: white;
 padding: 15px;
 margin: 10px 0;
 border-radius: 8px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
 }
 
 /* CERTIFICATES */
 
 .certificate-grid {
-
 display: grid;
 grid-template-columns: repeat(2,1fr);
 gap: 10px;
-
 }
 
 .certificate-grid img {
-
 width: 100%;
 cursor: pointer;
 border-radius: 6px;
-
 }
 
 /* MODAL */
 
 #modal {
-
 display: none;
 position: fixed;
 top: 0;
@@ -94,43 +76,34 @@ left: 0;
 width: 100%;
 height: 100%;
 background: rgba(0,0,0,0.8);
-
 }
 
 #modal img {
-
 display: block;
 margin: auto;
 max-width: 90%;
 margin-top: 5%;
-
 }
 
 /* BUTTON */
 
 button {
-
 padding: 10px;
 background: #0077cc;
 color: white;
 border: none;
 border-radius: 5px;
 cursor: pointer;
-
 }
 
 button:hover {
-
 background: #005fa3;
-
 }
 
 pre {
-
 background: white;
 padding: 10px;
 border-radius: 6px;
-
 }
 
 </style>
@@ -176,8 +149,6 @@ under MeitY-sponsored C2S Project on Implantable Pacemaker Chip (iPACE-CHIP).
 </div>
 
 </section>
-
-
 
 <!-- EDUCATION -->
 
@@ -300,8 +271,6 @@ Quiz Game Application
 
 </section>
 
-
-
 <!-- PROJECTS -->
 
 <section>
@@ -396,8 +365,6 @@ onclick="openModal(this.src)">
 
 </section>
 
-
-
 <!-- JSON INVOICE -->
 
 <section>
@@ -405,9 +372,7 @@ onclick="openModal(this.src)">
 <h2>Invoice (JSON Viewer)</h2>
 
 <button onclick="loadInvoice()">
-
 Load Invoice
-
 </button>
 
 <pre id="invoiceBox"></pre>
@@ -446,7 +411,7 @@ document.getElementById("modal").style.display="none";
 }
 
 
-/* LOAD JSON */
+/* JSON LOAD */
 
 function loadInvoice(){
 
@@ -469,8 +434,8 @@ status: "Paid"
 };
 
 document.getElementById("invoiceBox")
-
-.textContent = JSON.stringify(invoice,null,2);
+.textContent =
+JSON.stringify(invoice,null,2);
 
 }
 
