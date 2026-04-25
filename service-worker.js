@@ -1,31 +1,39 @@
-const CACHE_NAME = "vlsi-cache-v1";
+const CACHE_NAME = "portfolio-cache-v1";
 
-const FILES = [
+const urlsToCache = [
 
-"./",
-"./index.html",
-"./styles.css",
-"./manifest.json"
+"/",
+"/index.html",
+"/styles.css",
+"/photo.jpg"
 
 ];
 
-self.addEventListener("install", e => {
+self.addEventListener("install", event => {
 
-e.waitUntil(
+event.waitUntil(
 
 caches.open(CACHE_NAME)
-.then(cache => cache.addAll(FILES))
+.then(cache => {
+
+return cache.addAll(urlsToCache);
+
+})
 
 );
 
 });
 
-self.addEventListener("fetch", e => {
+self.addEventListener("fetch", event => {
 
-e.respondWith(
+event.respondWith(
 
-caches.match(e.request)
-.then(res => res || fetch(e.request))
+caches.match(event.request)
+.then(response => {
+
+return response || fetch(event.request);
+
+})
 
 );
 
