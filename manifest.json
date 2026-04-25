@@ -1,25 +1,101 @@
 {
-  "name": "Hitik Kumar Nayak Portfolio",
-  "short_name": "Hitik Portfolio",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#3b82f6",
-  "orientation": "portrait",
+  "name": "Hitik Kumar Nayak",
+  "title": "VLSI Design Engineer",
+  "email": "hitikkumarnayak22@gmail.com",
+  "phone": "+91 7978594517",
+  "location": "India",
 
-  "icons": [
+  "role": "Project Assistant - ABV-IIITM Gwalior",
 
+  "summary": "Electronics and Communication Engineer specializing in VLSI Design, Analog Circuits, and IC Layout using Cadence Virtuoso. Currently working on Implantable Pacemaker Chip (iPACE-CHIP).",
+
+  "skills": {
+    "vlsi": [
+      "Schematic Design",
+      "Layout Design",
+      "DRC",
+      "LVS",
+      "PEX"
+    ],
+    "tools": [
+      "Cadence Virtuoso",
+      "LTSpice",
+      "MATLAB",
+      "Python"
+    ],
+    "programming": [
+      "Python",
+      "JavaScript"
+    ]
+  },
+
+  "projects": [
     {
-      "src": "icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "name": "Two-Stage CMOS Amplifier",
+      "category": "analog",
+      "description": "Designed using Cadence Virtuoso with full layout and verification.",
+      "tools": ["Cadence"],
+      "github": "https://github.com/hitiknayak"
     },
-
     {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "name": "Hybrid Full Adder",
+      "category": "digital",
+      "description": "Designed using LTSpice for digital logic optimization.",
+      "tools": ["LTSpice"],
+      "github": "https://github.com/hitiknayak"
     }
+  ],
 
-  ]
+  "workflow": [
+    "Schematic Design",
+    "Layout Design",
+    "DRC Verification",
+    "LVS Verification",
+    "PEX Extraction"
+  ],
+
+  "research_interests": [
+    "VLSI Design",
+    "Analog IC Design",
+    "Physical Design",
+    "Biomedical ICs"
+  ],
+
+  "certifications": [
+    {
+      "name": "Google Analytics",
+      "issuer": "Great Learning",
+      "type": "Certification"
+    },
+    {
+      "name": "Python Programming Internship",
+      "issuer": "Softnetix",
+      "type": "Internship"
+    }
+  ],
+
+  "internships": [
+    {
+      "company": "NIT Raipur",
+      "role": "VLSI Intern",
+      "work": "CMOS design, Hybrid Full Adder, LTSpice simulation"
+    },
+    {
+      "company": "Softnetix",
+      "role": "Python Intern",
+      "work": "Password generator and quiz game development"
+    }
+  ],
+
+  "current_work": {
+    "organization": "ABV-IIITM Gwalior",
+    "project": "Implantable Pacemaker Chip (iPACE-CHIP)",
+    "domain": "VLSI / Biomedical IC Design"
+  },
+
+  "social_links": {
+    "github": "https://github.com/hitiknayak",
+    "linkedin": "https://linkedin.com",
+    "portfolio": "your-portfolio-link"
+  }
 }
