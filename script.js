@@ -1,13 +1,23 @@
-const toggleBtn = document.getElementById("themeToggle");
+
+/* =========================
+   1️⃣ DARK / LIGHT MODE
+========================= */
+
+const toggleBtn =
+document.getElementById("themeToggle");
 
 toggleBtn.addEventListener("click", () => {
 
 document.body.classList.toggle("light-mode");
 
+// Change icon
+
 toggleBtn.textContent =
 document.body.classList.contains("light-mode")
 ? "☀️"
 : "🌙";
+
+// Save preference
 
 localStorage.setItem(
 "theme",
@@ -17,6 +27,8 @@ document.body.classList.contains("light-mode")
 );
 
 });
+
+// Load saved theme
 
 window.addEventListener("load", () => {
 
@@ -29,6 +41,12 @@ toggleBtn.textContent = "☀️";
 }
 
 });
+
+
+/* =========================
+   2️⃣ TYPING ANIMATION
+========================= */
+
 const textArray = [
 "VLSI Designer",
 "Analog Circuit Engineer",
@@ -36,67 +54,106 @@ const textArray = [
 "Physical Design Enthusiast"
 ];
 
-let i = 0, j = 0;
+let i = 0;
+let j = 0;
 
-function type() {
+function typeEffect() {
 
-let typing = document.getElementById("typing-text");
+const el = document.getElementById("typing-text");
 
-if (!typing) return;
+if (!el) return;
 
 if (j < textArray[i].length) {
 
-typing.textContent += textArray[i][j];
+el.textContent += textArray[i][j];
 
 j++;
 
-setTimeout(type, 80);
+setTimeout(typeEffect, 80);
 
 } else {
 
-setTimeout(erase, 1500);
+setTimeout(eraseEffect, 1500);
 
 }
 
 }
 
-function erase() {
+function eraseEffect() {
 
-let typing = document.getElementById("typing-text");
+const el = document.getElementById("typing-text");
 
 if (j > 0) {
 
-typing.textContent = textArray[i].substring(0, j - 1);
+el.textContent = textArray[i].substring(0, j - 1);
 
 j--;
 
-setTimeout(erase, 40);
+setTimeout(eraseEffect, 40);
 
 } else {
 
 i = (i + 1) % textArray.length;
 
-setTimeout(type, 500);
+setTimeout(typeEffect, 500);
 
 }
 
 }
 
-window.onload = type;
+window.addEventListener("load", typeEffect);
+
+
+/* =========================
+   3️⃣ SCROLL REVEAL
+========================= */
+
+function revealSections() {
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+reveals.forEach((el) => {
+
+const windowHeight = window.innerHeight;
+
+const elementTop =
+el.getBoundingClientRect().top;
+
+const offset = 100;
+
+if (elementTop < windowHeight - offset) {
+
+el.classList.add("active");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealSections);
+
+
+/* =========================
+   4️⃣ PROJECT FILTER
+========================= */
+
 function filterProjects(category) {
 
-let projects = document.querySelectorAll(".project-box");
+const projects =
+document.querySelectorAll(".project-box");
 
-projects.forEach(p => {
+projects.forEach((project) => {
 
 if (category === "all") {
 
-p.style.display = "block";
+project.style.display = "block";
 
 } else {
 
-p.style.display =
-p.classList.contains(category)
+project.style.display =
+project.classList.contains(category)
 ? "block"
 : "none";
 
@@ -105,33 +162,48 @@ p.classList.contains(category)
 });
 
 }
-window.onscroll = function () {
 
-let winScroll =
-document.body.scrollTop ||
-document.documentElement.scrollTop;
 
-let height =
+/* =========================
+   5️⃣ SCROLL PROGRESS BAR
+========================= */
+
+window.addEventListener("scroll", () => {
+
+let scrollTop =
+document.documentElement.scrollTop ||
+document.body.scrollTop;
+
+let scrollHeight =
 document.documentElement.scrollHeight -
 document.documentElement.clientHeight;
 
-let scrolled =
-(winScroll / height) * 100;
+let progress =
+(scrollTop / scrollHeight) * 100;
 
 document.getElementById("progressBar").style.width =
-scrolled + "%";
+progress + "%";
 
-};
+});
 
-const images = document.querySelectorAll("img");
 
-const popup = document.getElementById("imagePopup");
+/* =========================
+   6️⃣ IMAGE POPUP GALLERY
+========================= */
 
-const popupImg = document.getElementById("popupImg");
+const images =
+document.querySelectorAll("img");
 
-const closePopup = document.getElementById("closePopup");
+const popup =
+document.getElementById("imagePopup");
 
-images.forEach(img => {
+const popupImg =
+document.getElementById("popupImg");
+
+const closePopup =
+document.getElementById("closePopup");
+
+images.forEach((img) => {
 
 img.addEventListener("click", () => {
 
@@ -146,5 +218,17 @@ popupImg.src = img.src;
 closePopup.addEventListener("click", () => {
 
 popup.style.display = "none";
+
+});
+
+// Close popup when clicking outside image
+
+popup.addEventListener("click", (e) => {
+
+if (e.target === popup) {
+
+popup.style.display = "none";
+
+}
 
 });
