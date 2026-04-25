@@ -1,0 +1,641 @@
+/* =========================
+   ROOT VARIABLES (THEME)
+========================= */
+
+:root {
+
+--bg-color: #020617;
+
+--text-color: #ffffff;
+
+--card-color: #0f172a;
+
+--accent-color: #38bdf8;
+
+--shadow: rgba(0,0,0,0.4);
+
+}
+
+/* LIGHT MODE */
+
+body.light-mode {
+
+--bg-color: #f8fafc;
+
+--text-color: #0f172a;
+
+--card-color: #ffffff;
+
+--accent-color: #2563eb;
+
+--shadow: rgba(0,0,0,0.1);
+
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+
+background: var(--bg-color);
+
+color: var(--text-color);
+
+transition: 0.3s;
+
+}
+
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+
+#progressBar {
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+height: 5px;
+
+width: 0%;
+
+background: var(--accent-color);
+
+z-index: 1000;
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 15px 50px;
+
+background: var(--card-color);
+
+position: sticky;
+
+top: 0;
+
+z-index: 999;
+
+box-shadow: 0 4px 10px var(--shadow);
+
+}
+
+.nav-links {
+
+display: flex;
+
+list-style: none;
+
+}
+
+.nav-links li {
+
+margin: 0 15px;
+
+}
+
+.nav-links a {
+
+text-decoration: none;
+
+color: var(--text-color);
+
+transition: 0.3s;
+
+}
+
+.nav-links a:hover {
+
+color: var(--accent-color);
+
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.home {
+
+min-height: 100vh;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 40px;
+
+}
+
+.home-container {
+
+display: flex;
+
+align-items: center;
+
+gap: 40px;
+
+flex-wrap: wrap;
+
+}
+
+.home-image img {
+
+width: 220px;
+
+height: 220px;
+
+border-radius: 50%;
+
+border: 4px solid var(--accent-color);
+
+object-fit: cover;
+
+box-shadow: 0 0 20px var(--shadow);
+
+}
+
+.home-content h1 {
+
+font-size: 40px;
+
+}
+
+.home-content span {
+
+color: var(--accent-color);
+
+}
+
+.home-content h3 {
+
+margin-top: 10px;
+
+font-size: 20px;
+
+}
+
+/* BUTTON */
+
+.btn {
+
+display: inline-block;
+
+margin-top: 15px;
+
+padding: 10px 20px;
+
+background: var(--accent-color);
+
+color: white;
+
+text-decoration: none;
+
+border-radius: 6px;
+
+transition: 0.3s;
+
+}
+
+.btn:hover {
+
+opacity: 0.8;
+
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+
+text-align: center;
+
+font-size: 32px;
+
+margin: 40px 0;
+
+color: var(--accent-color);
+
+}
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal {
+
+opacity: 0;
+
+transform: translateY(50px);
+
+transition: 0.6s;
+
+}
+
+.reveal.active {
+
+opacity: 1;
+
+transform: translateY(0);
+
+}
+
+/* =========================
+   SKILLS / RESEARCH / TOOLS
+========================= */
+
+.skills-container,
+.research-container,
+.tools-container {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 20px;
+
+padding: 20px;
+
+}
+
+.skill-box,
+.research-box,
+.tool-box {
+
+background: var(--card-color);
+
+padding: 20px;
+
+border-radius: 10px;
+
+transition: 0.3s;
+
+box-shadow: 0 4px 10px var(--shadow);
+
+}
+
+.skill-box:hover,
+.research-box:hover,
+.tool-box:hover {
+
+transform: translateY(-5px);
+
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.filter-buttons {
+
+text-align: center;
+
+margin-bottom: 20px;
+
+}
+
+.filter-buttons button {
+
+margin: 5px;
+
+padding: 8px 15px;
+
+border: none;
+
+background: var(--accent-color);
+
+color: white;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+
+.project-container {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+gap: 20px;
+
+padding: 20px;
+
+}
+
+.project-box {
+
+background: var(--card-color);
+
+padding: 15px;
+
+border-radius: 10px;
+
+box-shadow: 0 4px 10px var(--shadow);
+
+transition: 0.3s;
+
+}
+
+.project-box:hover {
+
+transform: scale(1.03);
+
+}
+
+.project-box img {
+
+width: 100%;
+
+border-radius: 8px;
+
+margin: 10px 0;
+
+}
+
+/* =========================
+   IO PAD GALLERY
+========================= */
+
+.iopad-gallery {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+gap: 10px;
+
+padding: 20px;
+
+}
+
+.iopad-gallery img {
+
+width: 100%;
+
+border-radius: 8px;
+
+transition: 0.3s;
+
+cursor: pointer;
+
+}
+
+.iopad-gallery img:hover {
+
+transform: scale(1.05);
+
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+max-width: 800px;
+
+margin: auto;
+
+padding: 20px;
+
+}
+
+.timeline-item {
+
+background: var(--card-color);
+
+padding: 15px;
+
+margin-bottom: 15px;
+
+border-left: 4px solid var(--accent-color);
+
+border-radius: 6px;
+
+}
+
+/* =========================
+   VERIFICATION + GRAPHS
+========================= */
+
+.verification-gallery,
+.comparison-gallery {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 20px;
+
+padding: 20px;
+
+}
+
+.verify-box,
+.graph-box {
+
+background: var(--card-color);
+
+padding: 15px;
+
+border-radius: 10px;
+
+text-align: center;
+
+}
+
+.verify-box img,
+.graph-box img {
+
+width: 100%;
+
+border-radius: 8px;
+
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certification-container {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 20px;
+
+padding: 20px;
+
+}
+
+.certification-box {
+
+background: var(--card-color);
+
+padding: 20px;
+
+border-radius: 10px;
+
+text-align: center;
+
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form {
+
+max-width: 500px;
+
+margin: auto;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+
+padding: 20px;
+
+}
+
+input,
+textarea {
+
+padding: 10px;
+
+border-radius: 6px;
+
+border: none;
+
+outline: none;
+
+}
+
+/* =========================
+   LINKEDIN BUTTON
+========================= */
+
+.linkedin-btn {
+
+display: inline-block;
+
+margin-top: 10px;
+
+padding: 10px 15px;
+
+background: #0077b5;
+
+color: white;
+
+border-radius: 6px;
+
+text-decoration: none;
+
+}
+
+/* =========================
+   IMAGE POPUP
+========================= */
+
+.popup {
+
+display: none;
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 100%;
+
+background: rgba(0,0,0,0.9);
+
+justify-content: center;
+
+align-items: center;
+
+z-index: 1000;
+
+}
+
+.popup img {
+
+max-width: 90%;
+
+max-height: 90%;
+
+}
+
+#closePopup {
+
+position: absolute;
+
+top: 20px;
+
+right: 30px;
+
+font-size: 30px;
+
+color: white;
+
+cursor: pointer;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px) {
+
+.home-container {
+
+flex-direction: column;
+
+text-align: center;
+
+}
+
+.navbar {
+
+flex-direction: column;
+
+}
+
+}
