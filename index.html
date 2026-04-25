@@ -4,10 +4,13 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Hitik Kumar Nayak Portfolio</title>
+<title>
+Hitik Kumar Nayak | Portfolio
+</title>
 
 <link rel="stylesheet"
 href="styles.css">
@@ -15,27 +18,77 @@ href="styles.css">
 <link rel="manifest"
 href="manifest.json">
 
-<meta name="theme-color"
-content="#1565c0">
-
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- Scroll Progress -->
+
+<div id="scrollBar"></div>
+
+<!-- Loader -->
+
+<div id="loader">
+
+<div class="spinner"></div>
+
+<p>Loading Portfolio...</p>
+
+</div>
+
+<!-- NAVBAR -->
 
 <nav>
 
+<h2 class="logo">
+Hitik Portfolio
+</h2>
+
+<button
+class="menu-toggle"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
 <ul>
 
-<li><a href="#home">Home</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#job">Job</a></li>
-<li><a href="#internships">Internships</a></li>
-<li><a href="#exams">Exams</a></li>
-<li><a href="#achievements">Achievements</a></li>
-<li><a href="#resume">Resume</a></li>
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#home">
+Home
+</a>
+</li>
+
+<li>
+<a href="#projects">
+Projects
+</a>
+</li>
+
+<li>
+<a href="#skills">
+Skills
+</a>
+</li>
+
+<li>
+<a href="#timeline">
+Experience
+</a>
+</li>
+
+<li>
+<a href="#certificates">
+Certificates
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
 
 </ul>
 
@@ -45,648 +98,30 @@ content="#1565c0">
 
 </nav>
 
-<!-- ================= HOME ================= -->
+<!-- HERO -->
 
 <header id="home">
 
 <img src="photo.jpg"
 class="profile-photo">
 
-<div class="header-text">
-
 <h1>
-Hitik Kumar Nayak
+
+<span id="typing"></span>
+
 </h1>
 
 <p>
-VLSI | Analog Design | Research Portfolio
+
+VLSI | Analog Design | Research
+
 </p>
 
 <p>
+
 Project Assistant – ABV-IIITM Gwalior  
 Graduate Engineer Trainee – MSP Steel & Power Ltd.
-</p>
 
-</div>
-
-</header>
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-<h2>
-Projects
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="projects/full_adder.jpg">
-
-<h3>
-Hybrid 20T Full Adder
-</h3>
-
-<p>
-Designed low-power Hybrid Full Adder
-using LTSpice. Calculated delay,
-power and PDP.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="projects/opamp.jpg">
-
-<h3>
-Two Stage Operational Amplifier
-</h3>
-
-<p>
-Designed Opamp using Cadence Virtuoso.
-Performed Layout, DRC, LVS and PEX.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="projects/6g.jpg">
-
-<h3>
-Optimization of Channel Capacity of 6G System
-</h3>
-
-<p>
-Used MATLAB to optimize
-channel capacity across bands.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="projects/python.jpg">
-
-<h3>
-Python Strong Password Generator
-</h3>
-
-<p>
-Generated strong passwords
-using Python logic.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="projects/japan.jpg">
-
-<h3>
-Japan Job Recruitment Website
-</h3>
-
-<p>
-Developed website using
-HTML, CSS and JavaScript.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills">
-
-<h2>
-Skills
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-VLSI Design Tools
-</h3>
-
-<ul>
-
-<li>Cadence Virtuoso</li>
-
-<li>DRC & LVS Verification</li>
-
-<li>Parasitic Extraction (PEX)</li>
-
-<li>Layout Design</li>
-
-<li>LTSpice Simulation</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-Programming Languages
-</h3>
-
-<ul>
-
-<li>Python</li>
-
-<li>MATLAB</li>
-
-<li>HTML</li>
-
-<li>CSS</li>
-
-<li>JavaScript</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-Core Electronics
-</h3>
-
-<ul>
-
-<li>Analog Electronics</li>
-
-<li>Digital Electronics</li>
-
-<li>Signals & Systems</li>
-
-<li>Communication Systems</li>
-
-<li>VLSI Design</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>
-Other Skills
-</h3>
-
-<ul>
-
-<li>Technical Documentation (LaTeX)</li>
-
-<li>Problem Solving</li>
-
-<li>Research Writing</li>
-
-<li>Circuit Simulation</li>
-
-<li>Debugging</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= EDUCATION ================= -->
-
-<section id="education">
-
-<h2>
-Education
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>
-B.Tech – Electronics & Communication Engineering
-</h3>
-
-<p>
-Guru Ghasidas University (GGU), Bilaspur  
-</p>
-
-<p>
-Specialization in Electronics,
-VLSI Design and Communication Systems.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-Higher Secondary Education
-</h3>
-
-<p>
-Science Stream (Physics, Chemistry, Mathematics)
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= CADENCE FLOW ================= -->
-
-<section id="cadence">
-
-<h2>
-Cadence Design Flow Gallery
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="cadence/schematic.jpg">
-
-<h4>
-Schematic Design
-</h4>
-
-<p>
-Designed transistor-level schematic
-for Two Stage Operational Amplifier.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="cadence/layout.jpg">
-
-<h4>
-Layout Design
-</h4>
-
-<p>
-Implemented layout following
-design rules and matching constraints.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="cadence/drc.jpg">
-
-<h4>
-DRC Verification
-</h4>
-
-<p>
-Verified layout against
-foundry design rules.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="cadence/lvs.jpg">
-
-<h4>
-LVS Verification
-</h4>
-
-<p>
-Matched schematic
-with layout connectivity.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="cadence/pex.jpg">
-
-<h4>
-PEX Extraction
-</h4>
-
-<p>
-Extracted parasitic elements
-for post-layout simulation.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="cadence/testbench.jpg">
-
-<h4>
-Testbench Simulation
-</h4>
-
-<p>
-Performed AC and transient
-analysis verification.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= RESEARCH ================= -->
-
-<section id="research">
-
-<h2>
-Research Work
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-Optimization of Channel Capacity in 6G Systems
-</h3>
-
-<p>
-
-Conducted MATLAB-based analysis
-on multi-band frequency systems
-to optimize channel capacity.
-
-Analyzed latency, signal loss,
-and achievable data rates
-for different frequency ranges.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Analog Circuit Design Research
-</h3>
-
-<p>
-
-Designed Two Stage Operational Amplifier
-using Cadence Virtuoso.
-
-Performed layout design,
-DRC, LVS and PEX validation.
-
-Compared pre-layout and
-post-layout performance.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Low Power Full Adder Design
-</h3>
-
-<p>
-
-Developed Hybrid 20T Full Adder
-using LTSpice simulation.
-
-Optimized propagation delay
-and Power Delay Product (PDP).
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-  
-<!-- ================= JOB ================= -->
-
-<section id="job">
-
-<h2>
-Job Certificates
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h4>
-MSP Steel & Power Ltd.
-</h4>
-
-<a href="certificates/job/msp.pdf"
-target="_blank"
-class="btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h4>
-ABV-IIITM Gwalior
-</h4>
-
-<a href="certificates/job/iiitm.pdf"
-target="_blank"
-class="btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= INTERNSHIPS ================= -->
-
-<section id="internships">
-
-<h2>
-Internship Certificates
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h4>
-Softnetix Internship
-</h4>
-
-<a href="certificates/internships/softnetix.pdf"
-target="_blank"
-class="btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h4>
-NIT Raipur Internship
-</h4>
-
-<a href="certificates/internships/nit.pdf"
-target="_blank"
-class="btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= EXAMS ================= -->
-
-<section id="exams">
-
-<h2>
-Exam Certificates
-</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h4>
-GATE – Electronics Engineering
-</h4>
-
-<a href="certificates/exams/gate.pdf"
-target="_blank"
-class="btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h4>
-TCS NQT Cognitive
-</h4>
-
-<a href="certificates/exams/tcs.pdf"
-target="_blank"
-class="btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= ACHIEVEMENTS ================= -->
-
-<section id="achievements">
-
-<h2>
-Achievements
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h4>Sustain-A-Thon – IOCL</h4>
-<a href="certificates/achievements/sustain.pdf"
-target="_blank"
-class="btn">View Certificate</a>
-</div>
-
-<div class="card">
-<h4>Virtual Volunteer – InAmigos</h4>
-<a href="certificates/achievements/inamigos.pdf"
-target="_blank"
-class="btn">View Certificate</a>
-</div>
-
-<div class="card">
-<h4>Google Analytics</h4>
-<a href="certificates/achievements/google.pdf"
-target="_blank"
-class="btn">View Certificate</a>
-</div>
-
-<div class="card">
-<h4>Campus Ambassador – IMUN</h4>
-<a href="certificates/achievements/imun.pdf"
-target="_blank"
-class="btn">View Certificate</a>
-</div>
-
-<div class="card">
-<h4>Business Development – JMES</h4>
-<a href="certificates/achievements/jmes.pdf"
-target="_blank"
-class="btn">View Certificate</a>
-</div>
-
-<div class="card">
-<h4>LaTeX – GGU</h4>
-<a href="certificates/achievements/latex.pdf"
-target="_blank"
-class="btn">View Certificate</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= RESUME ================= -->
-
-<section id="resume">
-
-<h2>
-Resume
-</h2>
-
-<p>
-You can view or download my resume below:
 </p>
 
 <a href="resume.pdf"
@@ -699,21 +134,513 @@ View Resume
 
 <a href="resume.pdf"
 download
-class="btn">
+class="btn"
+onclick="countDownload()">
 
 Download Resume
 
 </a>
 
+<p>
+
+Resume Downloads:
+
+<span id="downloadCount">
+0
+</span>
+
+</p>
+
+</header>
+
+<!-- STATS -->
+
+<section id="stats">
+
+<div class="stats-container">
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="5">
+0
+</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="12">
+0
+</h2>
+
+<p>Certificates</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="3">
+0
+</h2>
+
+<p>Internships</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2 class="counter"
+data-target="2">
+0
+</h2>
+
+<p>Jobs</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>
+Projects
+</h2>
+
+<div class="filter-buttons">
+
+<button onclick="filterProjects('all')">
+All
+</button>
+
+<button onclick="filterProjects('vlsi')">
+VLSI
+</button>
+
+<button onclick="filterProjects('python')">
+Python
+</button>
+
+<button onclick="filterProjects('web')">
+Web
+</button>
+
+<button onclick="filterProjects('research')">
+Research
+</button>
+
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card vlsi">
+
+<img src="projects/fulladder.jpg"
+onclick="openModal(this.src)">
+
+<h3>
+Hybrid 20T Full Adder
+</h3>
+
+<p>
+Designed using LTSpice with delay and PDP analysis.
+</p>
+
+</div>
+
+<div class="project-card vlsi">
+
+<img src="projects/opamp.jpg"
+onclick="openModal(this.src)">
+
+<h3>
+Two Stage Opamp
+</h3>
+
+<p>
+Designed in Cadence Virtuoso with layout verification.
+</p>
+
+</div>
+
+<div class="project-card research">
+
+<img src="projects/6g.jpg"
+onclick="openModal(this.src)">
+
+<h3>
+Optimization of Channel Capacity of 6G
+</h3>
+
+<p>
+Analyzed different frequency bands using MATLAB.
+</p>
+
+</div>
+
+<div class="project-card python">
+
+<img src="projects/password.jpg"
+onclick="openModal(this.src)">
+
+<h3>
+Python Strong Password Generator
+</h3>
+
+<p>
+Secure password generation using Python.
+</p>
+
+</div>
+
+<div class="project-card web">
+
+<img src="projects/japanjob.jpg"
+onclick="openModal(this.src)">
+
+<h3>
+Japan Job Recruitment Website
+</h3>
+
+<p>
+Built using HTML, CSS and JavaScript.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills-container">
+
+<div class="skill">
+
+<p>Cadence Virtuoso</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+style="width:90%">
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Analog Design</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+style="width:85%">
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>VLSI Layout</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+style="width:88%">
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Python Programming</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+style="width:80%">
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>HTML CSS JavaScript</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+style="width:85%">
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>MATLAB</p>
+
+<div class="progress">
+
+<div class="progress-bar"
+style="width:82%">
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="education-box">
+
+<h3>
+B.Tech Electronics & Communication Engineering
+</h3>
+
+<p>
+Guru Ghasidas University, Bilaspur
+</p>
+
+<p>
+Specialization:
+VLSI Design and Communication Systems
+</p>
+
+</div>
+
+</section>
+
+<!-- CADENCE FLOW GALLERY -->
+
+<section id="cadence">
+
+<h2>Cadence Flow Gallery</h2>
+
+<div class="cadence-grid">
+
+<img src="cadence/schematic.jpg"
+onclick="openModal(this.src)">
+
+<img src="cadence/layout.jpg"
+onclick="openModal(this.src)">
+
+<img src="cadence/drc.jpg"
+onclick="openModal(this.src)">
+
+<img src="cadence/lvs.jpg"
+onclick="openModal(this.src)">
+
+<img src="cadence/pex.jpg"
+onclick="openModal(this.src)">
+
+<img src="cadence/testbench.jpg"
+onclick="openModal(this.src)">
+
+</div>
+
+</section>
+
+<!-- TIMELINE EXPERIENCE -->
+
+<section id="timeline">
+
+<h2>Experience Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>
+Project Assistant — ABV-IIITM Gwalior
+</h3>
+
+<p>
+Working on Implantable Pacemaker Chip (iPACE-CHIP) using EDA tools and VLSI flow.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+Graduate Engineer Trainee — MSP Steel & Power Ltd.
+</h3>
+
+<p>
+Electrical system maintenance and industrial automation exposure.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+Intern — NIT Raipur
+</h3>
+
+<p>
+Designed Hybrid 20T Full Adder using LTSpice.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+Python Intern — Softnetix
+</h3>
+
+<p>
+Developed Strong Password Generator and Quiz Game.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+
+<h2>Certificates</h2>
+
+<input
+type="text"
+id="certificateSearch"
+placeholder="Search Certificate..."
+onkeyup="searchCertificates()">
+
+<div class="certificate-grid">
+
+<div class="certificate">
+
+<img src="certificates/latex.jpg"
+onclick="openModal(this.src)">
+
+<p>
+LaTeX for Technical Writing — GGU
+</p>
+
+</div>
+
+<div class="certificate">
+
+<img src="certificates/google.jpg"
+onclick="openModal(this.src)">
+
+<p>
+Google Analytics Certification
+</p>
+
+</div>
+
+<div class="certificate">
+
+<img src="certificates/python.jpg"
+onclick="openModal(this.src)">
+
+<p>
+Python Programming Internship
+</p>
+
+</div>
+
+<div class="certificate">
+
+<img src="certificates/imun.jpg"
+onclick="openModal(this.src)">
+
+<p>
+IMUN Campus Ambassador Internship
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESEARCH WORK -->
+
+<section id="research">
+
+<h2>Research Work</h2>
+
+<div class="research-box">
+
+<h3>
+Optimization of Channel Capacity of 6G System
+</h3>
+
+<p>
+
+Studied different frequency bands including  
+50–100 GHz, 100–150 GHz, 150–200 GHz  
+and analyzed latency, signal loss and  
+channel capacity using MATLAB simulation.
+
+</p>
+
+</div>
+
+<div class="research-box">
+
+<h3>
+Two Stage Operational Amplifier Design
+</h3>
+
+<p>
+
+Designed schematic, layout, LVS, DRC  
+and Parasitic Extraction (PEX)  
+using Cadence Virtuoso.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT SECTION -->
 
 <section id="contact">
 
-<h2>
-Contact
-</h2>
+<h2>Contact</h2>
+
+<div class="contact-box">
 
 <p>
 📞 7978594517
@@ -724,95 +651,173 @@ Contact
 </p>
 
 <p>
-💻 GitHub  
+
+🌐 GitHub:  
 <a href="https://github.com/HitikNayak"
 target="_blank">
+
 github.com/HitikNayak
+
 </a>
+
 </p>
 
 <p>
-🔗 LinkedIn  
+
+💼 LinkedIn:  
 <a href="https://in.linkedin.com/in/hitik-kumar-nayak"
 target="_blank">
+
 linkedin.com/in/hitik-kumar-nayak
+
 </a>
+
 </p>
 
 <p>
-📸 Instagram  
+
+📸 Instagram:  
 <a href="https://www.instagram.com/hitik_nayak02/"
 target="_blank">
-instagram.com/hitik_nayak02
+
+Instagram Profile
+
 </a>
+
 </p>
 
 <p>
-▶ YouTube  
+
+▶ YouTube:  
 <a href="https://www.youtube.com/@hitik_kumar_nayak"
 target="_blank">
-youtube.com/@hitik_kumar_nayak
+
+YouTube Channel
+
 </a>
+
 </p>
 
 <p>
-📘 Facebook  
+
+📘 Facebook:  
 <a href="https://www.facebook.com/hitikkumar.nayak/"
 target="_blank">
-facebook.com/hitikkumar.nayak
+
+Facebook Profile
+
 </a>
+
 </p>
+
+</div>
 
 </section>
 
-<!-- ================= SCRIPT ================= -->
+<!-- RESUME VIEWER -->
 
-<script>
+<section id="resume">
 
-/* Smooth Scroll */
+<h2>Resume Preview</h2>
 
-document.querySelectorAll('nav a')
-.forEach(anchor => {
+<div class="resume-box">
 
-anchor.addEventListener(
-'click',
-function(e){
+<iframe
+src="resume.pdf"
+width="100%"
+height="500px">
+</iframe>
 
-e.preventDefault();
+<br>
 
-document.querySelector(
-this.getAttribute('href')
-).scrollIntoView({
+<a href="resume.pdf"
+download
+class="btn"
+onclick="countDownload()">
 
-behavior:'smooth'
+Download Resume
 
-});
+</a>
 
-});
+<p>
 
-});
+Downloads:
+<span id="downloadCount">
+0
+</span>
 
-/* Dark Mode */
+</p>
 
-document.getElementById(
-'darkToggle'
-).onclick=function(){
+</div>
 
-document.body.classList
-.toggle('dark-mode');
+</section>
 
-};
+<!-- VISITOR COUNTER -->
 
-/* Service Worker */
+<section id="visitor">
 
-if('serviceWorker' in navigator){
+<h2>Visitor Counter</h2>
 
-navigator.serviceWorker
-.register('service-worker.js');
+<div class="visitor-box">
 
-}
+<!-- hitwebcounter Code -->
 
-</script>
+<a href="https://www.hitwebcounter.com/"
+target="_blank">
+
+<img src="https://hitwebcounter.com/counter/counter.php?page=21492170&style=0001&nbdigits=5&type=page&initCount=0"
+title="Visitor Counter"
+alt="Visitor Counter"
+style="border:0;" />
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FLOATING CONTACT BUTTON -->
+
+<a href="https://wa.me/917978594517"
+class="floating-btn"
+target="_blank">
+
+💬
+
+</a>
+
+<!-- IMAGE MODAL POPUP -->
+
+<div id="imageModal"
+class="modal">
+
+<span
+class="close"
+onclick="closeModal()">
+
+×
+
+</span>
+
+<img
+class="modal-content"
+id="modalImg">
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+
+© 2026  
+Hitik Kumar Nayak  
+All Rights Reserved
+
+</p>
+
+</footer>
 
 </body>
 
