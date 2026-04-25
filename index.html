@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -14,229 +13,144 @@ Hitik Kumar Nayak | VLSI Portfolio
 </title>
 
 <link rel="stylesheet"
-href="style.css">
+href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- SCROLL BAR -->
+<header>
 
-<div id="scrollBar"></div>
+<nav class="navbar">
 
-
-<!-- LOADER -->
-
-<div id="loader">
-
-<h2>Loading Portfolio...</h2>
-
-</div>
-
-
-
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-
+<h2 class="logo">
 Hitik Kumar Nayak
+</h2>
 
-</div>
+<ul class="nav-links">
 
-<div class="menu-btn"
-onclick="toggleMenu()">
+<li><a href="#home">Home</a></li>
 
-☰
+<li><a href="#about">About</a></li>
 
-</div>
+<li><a href="#projects">Projects</a></li>
 
-<ul>
+<li><a href="#workflow">Workflow</a></li>
 
-<li>
-<a href="#about">About</a>
-</li>
+<li><a href="#research">Research</a></li>
 
-<li>
-<a href="#skills">Skills</a>
-</li>
-
-<li>
-<a href="#education">Education</a>
-</li>
-
-<li>
-<a href="#projects">Projects</a>
-</li>
-
-<li>
-<a href="#certificates">Certificates</a>
-</li>
-
-<li>
-<a href="#contact">Contact</a>
-</li>
+<li><a href="#contact">Contact</a></li>
 
 </ul>
 
-
-<button id="darkToggle">
-
-🌙
-
-</button>
-
 </nav>
 
+</header>
 
+<section id="home" class="home">
 
-<!-- HERO -->
+<div class="home-container">
 
-<section class="hero">
+<div class="home-image">
 
-<h1 id="typing"></h1>
+<img src="images/profile.jpg"
+alt="Profile Photo">
+
+</div>
+
+<div class="home-content">
+
+<h1>
+Hello, I'm
+<span>Hitik Kumar Nayak</span>
+</h1>
+
+<h3>
+VLSI Design | Analog Circuits
+</h3>
 
 <p>
 
-Project Assistant — ABV-IIITM Gwalior  
-Graduate Engineer Trainee — MSP Steel  
+Project Assistant at ABV-IIITM Gwalior  
+Working on Implantable Pacemaker Chip.
 
 </p>
 
 <a href="resume.pdf"
-class="btn"
-target="_blank">
-
-View Resume
-
-</a>
-
-<br><br>
-
-<a href="resume.pdf"
 download
-onclick="countDownload()"
 class="btn">
 
 Download Resume
 
 </a>
 
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
 <p>
 
-Downloads:
-<span id="downloadCount">0</span>
+Electronics and Communication Engineer  
+with strong interest in VLSI Design,
+Analog Circuits, and IC Layout.
+
+Currently working on Cadence-based
+IC design including DRC, LVS,
+and PEX verification.
 
 </p>
 
 </section>
 
+<section id="skills" class="skills">
 
+<h2 class="section-title">
+Skills
+</h2>
 
-<!-- ABOUT -->
+<div class="skills-container">
 
-<section id="about">
+<div class="skill-box">
 
-<h2>About Me</h2>
-
-<div class="about-box">
+<h3>VLSI Design</h3>
 
 <p>
-
-I am Hitik Kumar Nayak, an Electronics and Communication Engineer passionate about VLSI Design, Analog Circuit Design, and Semiconductor Research. Currently working as a Project Assistant at ABV-IIITM Gwalior under MeitY-sponsored chip design project, focusing on schematic design, layout, LVS, DRC, and parasitic extraction using Cadence Virtuoso.
-
+Schematic & Layout Design
 </p>
 
 </div>
 
-</section>
+<div class="skill-box">
 
+<h3>Cadence</h3>
 
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-<div class="skill">
-
-<div class="skill-name">
-
-Cadence Virtuoso
+<p>
+Virtuoso, DRC, LVS, PEX
+</p>
 
 </div>
 
-<div class="skill-bar">
+<div class="skill-box">
 
-<div class="skill-fill"
-style="width:90%">
+<h3>Programming</h3>
 
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<div class="skill-name">
-
-Analog Design
-
-</div>
-
-<div class="skill-bar">
-
-<div class="skill-fill"
-style="width:85%">
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<div class="skill-name">
-
-CMOS Layout
-
-</div>
-
-<div class="skill-bar">
-
-<div class="skill-fill"
-style="width:80%">
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="skill">
-
-<div class="skill-name">
-
-Python
-
-</div>
-
-<div class="skill-bar">
-
-<div class="skill-fill"
-style="width:75%">
-
-</div>
+<p>
+Python, MATLAB
+</p>
 
 </div>
 
@@ -244,305 +158,402 @@ style="width:75%">
 
 </section>
 
+<section id="projects" class="projects">
 
+<h2 class="section-title">
+Projects
+</h2>
 
-<!-- EDUCATION -->
+<div class="project-container">
 
-<section id="education">
+<div class="project-box">
 
-<h2>Education</h2>
+<h3>
+Two-Stage CMOS Amplifier
+</h3>
+
+<img src="images/amplifier_layout.png">
+
+<p>
+
+Designed CMOS amplifier using
+Cadence Virtuoso.
+
+</p>
+
+<a href="https://github.com/hitiknayak"
+target="_blank"
+class="github-btn">
+
+View on GitHub
+
+</a>
+
+</div>
+
+<div class="project-box">
+
+<h3>
+Hybrid Full Adder
+</h3>
+
+<img src="images/full_adder.png">
+
+<p>
+
+Designed Hybrid Full Adder
+using LT-Spice.
+
+</p>
+
+<a href="https://github.com/hitiknayak"
+target="_blank"
+class="github-btn">
+
+View on GitHub
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="iopad" class="iopad">
+
+<h2 class="section-title">
+
+IO Pad Ring Gallery
+
+</h2>
+
+<div class="iopad-gallery">
+
+<img src="images/iopad1.png">
+
+<img src="images/iopad2.png">
+
+<img src="images/iopad3.png">
+
+<img src="images/iopad4.png">
+
+</div>
+
+</section>
+
+<section id="workflow" class="workflow">
+
+<h2 class="section-title">
+
+Cadence Workflow Timeline
+
+</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
 
+<h3>Schematic Design</h3>
+
+<p>
+Created amplifier schematic.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Layout Design</h3>
+
+<p>
+Designed layout structure.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>DRC Check</h3>
+
+<p>
+Verified design rules.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>LVS Check</h3>
+
+<p>
+Matched layout & schematic.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>PEX Extraction</h3>
+
+<p>
+Generated extracted netlist.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="verification"
+class="verification">
+
+<h2 class="section-title">
+
+Verification Results
+
+</h2>
+
+<div class="verification-gallery">
+
+<div class="verify-box">
+
+<h3>DRC Result</h3>
+
+<img src="images/drc_clean.png">
+
+</div>
+
+<div class="verify-box">
+
+<h3>LVS Result</h3>
+
+<img src="images/lvs_matched.png">
+
+</div>
+
+<div class="verify-box">
+
+<h3>PEX Result</h3>
+
+<img src="images/pex_output.png">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="comparison"
+class="comparison">
+
+<h2 class="section-title">
+
+Pre vs Post Layout
+
+</h2>
+
+<div class="comparison-gallery">
+
+<img src="images/pre_post_gain.png">
+
+<img src="images/pre_post_bw.png">
+
+<img src="images/pre_post_power.png">
+
+</div>
+
+</section>
+
+<section id="research"
+class="research">
+
+<h2 class="section-title">
+
+Research Interests
+
+</h2>
+
+<div class="research-container">
+
+<div class="research-box">
+
+<h3>VLSI Design</h3>
+
+<p>
+Analog & Mixed Signal IC
+</p>
+
+</div>
+
+<div class="research-box">
+
+<h3>Physical Design</h3>
+
+<p>
+Layout & Verification
+</p>
+
+</div>
+
+<div class="research-box">
+
+<h3>Biomedical IC</h3>
+
+<p>
+Implantable Devices
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="tools"
+class="tools">
+
+<h2 class="section-title">
+
+Tools & Technologies
+
+</h2>
+
+<div class="tools-container">
+
+<div class="tool-box">
+
+<h3>EDA Tools</h3>
+
+<ul>
+
+<li>Cadence Virtuoso</li>
+
+<li>Assura DRC</li>
+
+<li>LVS</li>
+
+<li>PEX</li>
+
+</ul>
+
+</div>
+
+<div class="tool-box">
+
+<h3>Programming</h3>
+
+<ul>
+
+<li>Python</li>
+
+<li>MATLAB</li>
+
+<li>JavaScript</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements"
+class="achievements">
+
+<h2 class="section-title">
+
+Achievements
+
+</h2>
+
+<div class="achievement-container">
+
+<div class="achievement-box">
+
 <h3>
-
-B.Tech — Electronics & Communication Engineering
-
+Project Assistant — ABV-IIITM
 </h3>
 
 <p>
-
-Guru Ghasidas University  
-CGPA: **7.62**
-
+Working on iPACE-CHIP project.
 </p>
 
 </div>
 
-</div>
-
-</section>
-
-
-
-<!-- PROJECT FILTER -->
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-
-<div class="filter-btns">
-
-<button onclick="filterProjects('all')">
-
-All
-
-</button>
-
-<button onclick="filterProjects('vlsi')">
-
-VLSI
-
-</button>
-
-<button onclick="filterProjects('python')">
-
-Python
-
-</button>
-
-</div>
-
-
-
-<div class="project-grid">
-
-
-<div class="project-card vlsi">
+<div class="achievement-box">
 
 <h3>
-
-Two Stage Op Amp Design
-
+Internship — NIT Raipur
 </h3>
 
 <p>
-
-Schematic, Layout, LVS, DRC, PEX verification using Cadence.
-
+Designed CMOS circuits.
 </p>
 
 </div>
 
+</div>
 
+</section>
 
-<div class="project-card python">
+<section id="certifications"
+class="certifications">
+
+<h2 class="section-title">
+
+Certifications
+
+</h2>
+
+<div class="certification-container">
+
+<div class="certification-box">
 
 <h3>
-
-Password Generator
-
+Google Analytics Certification
 </h3>
 
-<p>
+<a href="certificates/google_analytics.pdf"
+target="_blank"
+class="cert-btn">
 
-Python-based strong password generator tool.
+View Certificate
 
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- CADENCE FLOW GALLERY -->
-
-<section id="cadence">
-
-<h2>Cadence Flow Gallery</h2>
-
-<div class="certificate-grid">
-
-
-<div class="certificate">
-
-<img src="images/schematic.png"
-onclick="openModal(this.src)">
-
-<p>Schematic</p>
+</a>
 
 </div>
 
+<div class="certification-box">
 
+<h3>
+Python Internship
+</h3>
 
-<div class="certificate">
+<a href="certificates/python_internship.pdf"
+target="_blank"
+class="cert-btn">
 
-<img src="images/layout.png"
-onclick="openModal(this.src)">
+View Certificate
 
-<p>Layout</p>
-
-</div>
-
-
-
-<div class="certificate">
-
-<img src="images/lvs.png"
-onclick="openModal(this.src)">
-
-<p>LVS</p>
+</a>
 
 </div>
-
-
-
-<div class="certificate">
-
-<img src="images/drc.png"
-onclick="openModal(this.src)">
-
-<p>DRC</p>
-
-</div>
-
 
 </div>
 
 </section>
 
+<section id="contact"
+class="contact">
 
+<h2 class="section-title">
 
-<!-- CERTIFICATES -->
+Contact Me
 
-<section id="certificates">
-
-<h2>Certificates</h2>
-
-<div class="search-box">
-
-<input
-type="text"
-id="certificateSearch"
-onkeyup="searchCertificates()"
-placeholder="Search Certificates...">
-
-</div>
-
-
-<div class="certificate-grid">
-
-
-<div class="certificate">
-
-<img src="certificates/nit.png"
-onclick="openModal(this.src)">
-
-<p>
-
-NIT Raipur Internship
-
-</p>
-
-</div>
-
-
-
-<div class="certificate">
-
-<img src="certificates/python.png"
-onclick="openModal(this.src)">
-
-<p>
-
-Softnetix Python Internship
-
-</p>
-
-</div>
-
-
-
-<div class="certificate">
-
-<img src="certificates/analytics.png"
-onclick="openModal(this.src)">
-
-<p>
-
-Google Analytics Certificate
-
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- COUNTERS -->
-
-<section>
-
-<div class="counter-box">
-
-<div>
-
-<div class="counter"
-data-target="15">
-
-0
-
-</div>
-
-<p>Projects</p>
-
-</div>
-
-
-
-<div>
-
-<div class="counter"
-data-target="10">
-
-0
-
-</div>
-
-<p>Certificates</p>
-
-</div>
-
-
-
-<div>
-
-<div class="counter"
-data-target="500">
-
-0
-
-</div>
-
-<p>Visitors</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact-box">
+</h2>
 
 <p>
 
@@ -558,90 +569,74 @@ Phone:
 
 </p>
 
-<p>
+<div class="linkedin-section">
 
-GitHub:
-github.com/hitiknayak
+<a href="https://linkedin.com/"
+target="_blank"
+class="linkedin-btn">
 
-</p>
+<i class="fab fa-linkedin"></i>
 
-<p>
+LinkedIn Profile
 
-Instagram:
-https://www.instagram.com/hitik_nayak02/
-
-</p>
-
-<p>
-
-YouTube:
-https://www.youtube.com/@hitik_kumar_nayak
-
-</p>
-
-<p>
-
-Facebook:
-https://www.facebook.com/hitikkumar.nayak/
-
-</p>
-
-<p>
-
-Visitor Count:
-<span id="visitorCount">
-
-0
-
-</span>
-
-</p>
+</a>
 
 </div>
+
+<form action="https://formspree.io/f/yourID"
+method="POST">
+
+<input type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+<textarea name="message"
+placeholder="Message"
+required>
+</textarea>
+
+<button type="submit"
+class="btn">
+
+Send Message
+
+</button>
+
+</form>
 
 </section>
 
-
-
-<!-- FLOATING BUTTON -->
-
-<div class="floating-btn"
-onclick="scrollToContact()">
-
-📩
-
-</div>
-
-
-
-<!-- MODAL -->
-
-<div id="modal"
-onclick="closeModal()">
-
-<img id="modalImg">
-
-</div>
-
-
-
-<!-- FOOTER -->
-
 <footer>
 
+<p>
+
 © 2026 Hitik Kumar Nayak  
-VLSI | Analog Design | Research
+All Rights Reserved
+
+</p>
 
 </footer>
 
-
-
-<!-- SCRIPT -->
-
-<script src="script.js">
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
+<!-- DARK LIGHT MODE TOGGLE -->
+
+<div class="theme-toggle">
+
+<button id="themeToggle">
+
+🌙
+
+</button>
+
+</div>
 
 </html>
