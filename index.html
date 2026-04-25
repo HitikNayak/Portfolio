@@ -25,6 +25,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
+<!-- SCROLL PROGRESS BAR -->
+
+<div id="progressBar"></div>
+
 <header>
 
 <nav class="navbar">
@@ -49,11 +53,22 @@ Hitik Kumar Nayak
 
 </ul>
 
+<!-- DARK LIGHT MODE -->
+
+<div class="theme-toggle">
+
+<button id="themeToggle">
+🌙
+</button>
+
+</div>
+
 </nav>
 
 </header>
 
-<section id="home" class="home">
+<section id="home"
+class="home reveal">
 
 <div class="home-container">
 
@@ -67,12 +82,20 @@ alt="Profile Photo">
 <div class="home-content">
 
 <h1>
-Hello, I'm
-<span>Hitik Kumar Nayak</span>
+
+Hello, I'm  
+<span>
+
+Hitik Kumar Nayak
+
+</span>
+
 </h1>
 
 <h3>
-VLSI Design | Analog Circuits
+
+<span id="typing-text"></span>
+
 </h3>
 
 <p>
@@ -96,7 +119,8 @@ Download Resume
 
 </section>
 
-<section id="about" class="about">
+<section id="about"
+class="about reveal">
 
 <h2 class="section-title">
 About Me
@@ -116,7 +140,8 @@ and PEX verification.
 
 </section>
 
-<section id="skills" class="skills">
+<section id="skills"
+class="skills reveal">
 
 <h2 class="section-title">
 Skills
@@ -158,15 +183,38 @@ Python, MATLAB
 
 </section>
 
-<section id="projects" class="projects">
+<section id="projects"
+class="projects reveal">
 
 <h2 class="section-title">
+
 Projects
+
 </h2>
+
+<div class="filter-buttons">
+
+<button onclick="filterProjects('all')">
+All
+</button>
+
+<button onclick="filterProjects('analog')">
+Analog
+</button>
+
+<button onclick="filterProjects('digital')">
+Digital
+</button>
+
+<button onclick="filterProjects('layout')">
+Layout
+</button>
+
+</div>
 
 <div class="project-container">
 
-<div class="project-box">
+<div class="project-box analog">
 
 <h3>
 Two-Stage CMOS Amplifier
@@ -191,7 +239,7 @@ View on GitHub
 
 </div>
 
-<div class="project-box">
+<div class="project-box digital">
 
 <h3>
 Hybrid Full Adder
@@ -220,7 +268,8 @@ View on GitHub
 
 </section>
 
-<section id="iopad" class="iopad">
+<section id="iopad"
+class="iopad reveal">
 
 <h2 class="section-title">
 
@@ -242,7 +291,8 @@ IO Pad Ring Gallery
 
 </section>
 
-<section id="workflow" class="workflow">
+<section id="workflow"
+class="workflow reveal">
 
 <h2 class="section-title">
 
@@ -307,7 +357,7 @@ Generated extracted netlist.
 </section>
 
 <section id="verification"
-class="verification">
+class="verification reveal">
 
 <h2 class="section-title">
 
@@ -346,7 +396,7 @@ Verification Results
 </section>
 
 <section id="comparison"
-class="comparison">
+class="comparison reveal">
 
 <h2 class="section-title">
 
@@ -367,7 +417,7 @@ Pre vs Post Layout
 </section>
 
 <section id="research"
-class="research">
+class="research reveal">
 
 <h2 class="section-title">
 
@@ -411,143 +461,8 @@ Implantable Devices
 
 </section>
 
-<section id="tools"
-class="tools">
-
-<h2 class="section-title">
-
-Tools & Technologies
-
-</h2>
-
-<div class="tools-container">
-
-<div class="tool-box">
-
-<h3>EDA Tools</h3>
-
-<ul>
-
-<li>Cadence Virtuoso</li>
-
-<li>Assura DRC</li>
-
-<li>LVS</li>
-
-<li>PEX</li>
-
-</ul>
-
-</div>
-
-<div class="tool-box">
-
-<h3>Programming</h3>
-
-<ul>
-
-<li>Python</li>
-
-<li>MATLAB</li>
-
-<li>JavaScript</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="achievements"
-class="achievements">
-
-<h2 class="section-title">
-
-Achievements
-
-</h2>
-
-<div class="achievement-container">
-
-<div class="achievement-box">
-
-<h3>
-Project Assistant — ABV-IIITM
-</h3>
-
-<p>
-Working on iPACE-CHIP project.
-</p>
-
-</div>
-
-<div class="achievement-box">
-
-<h3>
-Internship — NIT Raipur
-</h3>
-
-<p>
-Designed CMOS circuits.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="certifications"
-class="certifications">
-
-<h2 class="section-title">
-
-Certifications
-
-</h2>
-
-<div class="certification-container">
-
-<div class="certification-box">
-
-<h3>
-Google Analytics Certification
-</h3>
-
-<a href="certificates/google_analytics.pdf"
-target="_blank"
-class="cert-btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-<div class="certification-box">
-
-<h3>
-Python Internship
-</h3>
-
-<a href="certificates/python_internship.pdf"
-target="_blank"
-class="cert-btn">
-
-View Certificate
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
 <section id="contact"
-class="contact">
+class="contact reveal">
 
 <h2 class="section-title">
 
@@ -612,6 +527,21 @@ Send Message
 
 </section>
 
+<!-- IMAGE POPUP -->
+
+<div id="imagePopup"
+class="popup">
+
+<span id="closePopup">
+
+×
+
+</span>
+
+<img id="popupImg">
+
+</div>
+
 <footer>
 
 <p>
@@ -626,17 +556,5 @@ All Rights Reserved
 <script src="script.js"></script>
 
 </body>
-
-<!-- DARK LIGHT MODE TOGGLE -->
-
-<div class="theme-toggle">
-
-<button id="themeToggle">
-
-🌙
-
-</button>
-
-</div>
 
 </html>
