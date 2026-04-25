@@ -6,7 +6,134 @@
 
 <title>Hitik Kumar Nayak Portfolio</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* BODY */
+
+body {
+
+font-family: Arial, sans-serif;
+margin: 0;
+background: #f4f4f4;
+
+}
+
+/* HEADER */
+
+header {
+
+background: #0077cc;
+color: white;
+text-align: center;
+padding: 20px;
+
+}
+
+.profile {
+
+width: 120px;
+border-radius: 50%;
+margin-bottom: 10px;
+
+}
+
+/* SECTIONS */
+
+section {
+
+padding: 20px;
+
+}
+
+h2 {
+
+color: #0077cc;
+
+}
+
+/* CARDS */
+
+.card {
+
+background: white;
+padding: 15px;
+margin: 10px 0;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+/* CERTIFICATES */
+
+.certificate-grid {
+
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 10px;
+
+}
+
+.certificate-grid img {
+
+width: 100%;
+cursor: pointer;
+border-radius: 6px;
+
+}
+
+/* MODAL */
+
+#modal {
+
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+
+}
+
+#modal img {
+
+display: block;
+margin: auto;
+max-width: 90%;
+margin-top: 5%;
+
+}
+
+/* BUTTON */
+
+button {
+
+padding: 10px;
+background: #0077cc;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+
+}
+
+button:hover {
+
+background: #005fa3;
+
+}
+
+pre {
+
+background: white;
+padding: 10px;
+border-radius: 6px;
+
+}
+
+</style>
 
 </head>
 
@@ -16,7 +143,7 @@
 
 <header>
 
-<img src="images/profile.jpg" class="profile">
+<img src="profile.jpg" class="profile">
 
 <h1>Hitik Kumar Nayak</h1>
 
@@ -33,6 +160,8 @@ B.Tech ECE | VLSI Enthusiast | Project Assistant – ABV-IIITM Gwalior
 
 <h2>About Me</h2>
 
+<div class="card">
+
 <p>
 
 I am Hitik Kumar Nayak, a B.Tech Electronics and Communication
@@ -40,9 +169,11 @@ Engineering graduate with strong interest in VLSI Design,
 Analog Circuits and Semiconductor Research.
 
 Currently working as Project Assistant at ABV-IIITM Gwalior
-under MeitY-sponsored C2S Project on Implantable Pacemaker Chip.
+under MeitY-sponsored C2S Project on Implantable Pacemaker Chip (iPACE-CHIP).
 
 </p>
+
+</div>
 
 </section>
 
@@ -69,7 +200,7 @@ CGPA: <b>7.62 / 10</b>
 </p>
 
 <p>
-Year: 2025
+Year of Completion: 2025
 </p>
 
 </div>
@@ -91,8 +222,11 @@ Year: 2025
 <p>
 
 Subjects Covered:
-Aptitude, Logical Reasoning,
-Numerical Ability, Verbal Ability
+
+Aptitude  
+Logical Reasoning  
+Numerical Ability  
+Verbal Ability  
 
 </p>
 
@@ -246,16 +380,16 @@ Python
 
 <div class="certificate-grid">
 
-<img src="certificates/latex.jpg"
+<img src="latex.jpg"
 onclick="openModal(this.src)">
 
-<img src="certificates/google.jpg"
+<img src="google.jpg"
 onclick="openModal(this.src)">
 
-<img src="certificates/python.jpg"
+<img src="python.jpg"
 onclick="openModal(this.src)">
 
-<img src="certificates/imun.jpg"
+<img src="imun.jpg"
 onclick="openModal(this.src)">
 
 </div>
@@ -264,7 +398,7 @@ onclick="openModal(this.src)">
 
 
 
-<!-- INVOICE VIEWER -->
+<!-- JSON INVOICE -->
 
 <section>
 
@@ -282,7 +416,7 @@ Load Invoice
 
 
 
-<!-- MODAL IMAGE -->
+<!-- MODAL -->
 
 <div id="modal"
 onclick="closeModal()">
@@ -293,7 +427,54 @@ onclick="closeModal()">
 
 
 
-<script src="script.js"></script>
+<script>
+
+/* IMAGE MODAL */
+
+function openModal(src){
+
+document.getElementById("modal").style.display="block";
+
+document.getElementById("modalImg").src=src;
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+
+/* LOAD JSON */
+
+function loadInvoice(){
+
+var invoice = {
+
+invoice_number: "INV001",
+
+name: "Hitik Kumar Nayak",
+
+role: "Project Assistant",
+
+organization: "ABV-IIITM Gwalior",
+
+project: "iPACE-CHIP",
+
+amount: "₹15000",
+
+status: "Paid"
+
+};
+
+document.getElementById("invoiceBox")
+
+.textContent = JSON.stringify(invoice,null,2);
+
+}
+
+</script>
 
 </body>
 
