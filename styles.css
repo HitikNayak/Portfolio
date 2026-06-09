@@ -1861,3 +1861,68 @@ footer hr{
 
 }
 
+
+/* Scroll Reveal */
+
+.project-card,
+.internship-card,
+.achievement-card,
+.timeline-item,
+.skill-category,
+.feature-card,
+.resume-card{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* Active Nav */
+
+.active-link{
+
+    color:#00d4ff !important;
+
+}
+
+/* Back To Top */
+
+#backToTop{
+
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#00d4ff;
+    color:#000;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    transition:.3s;
+}
+
+#backToTop:hover{
+
+    transform:scale(1.1);
+
+}
+
