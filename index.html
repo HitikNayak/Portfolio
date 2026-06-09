@@ -2,352 +2,170 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Hitik Kumar Nayak | VLSI Engineer Portfolio</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 
-<title>
-Hitik Kumar Nayak | VLSI Portfolio
-</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link rel="stylesheet"
-href="styles.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-<div id="progressBar"></div>
-<header>
 
-<nav class="navbar">
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
 
-<h2 class="logo">
-Hitik Kumar Nayak
-</h2>
+    <header>
 
-<ul class="nav-links">
+        <nav class="navbar">
 
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#workflow">Workflow</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#contact">Contact</a></li>
+            <div class="logo">
+                <img src="hkn logo.jpg" alt="Logo">
+                <span>Hitik Kumar Nayak</span>
+            </div>
 
-</ul>
+            <ul class="nav-links">
 
-<!-- DARK LIGHT TOGGLE -->
+                <li><a href="#home">Home</a></li>
 
-<button id="themeToggle">
-🌙
-</button>
+                <li><a href="#about">About</a></li>
 
-</nav>
+                <li><a href="#skills">Skills</a></li>
 
-</header>
+                <li><a href="#experience">Experience</a></li>
 
-<section id="home"
-class="home reveal">
+                <li><a href="#projects">Projects</a></li>
 
-<div class="home-container">
+                <li><a href="#tapeout">Tape-Out</a></li>
 
-<div class="home-image">
+                <li><a href="#internships">Internships</a></li>
 
-<img src="profile.jpg"
-alt="Profile Photo">
+                <li><a href="#achievements">Achievements</a></li>
 
-</div>
+                <li><a href="#contact">Contact</a></li>
 
-<div class="home-content">
+            </ul>
 
-<h1>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
 
-Hello, I'm  
-<span>Hitik Kumar Nayak</span>
+        </nav>
 
-</h1>
+    </header>
 
-<h3>
+    <!-- ========================= -->
+    <!-- HERO SECTION -->
+    <!-- ========================= -->
 
-<span id="typing-text"></span>
+    <section id="home" class="hero">
 
-</h3>
+        <div class="hero-overlay"></div>
 
-<p>
+        <div class="hero-content">
 
-Project Assistant at ABV-IIITM Gwalior  
-Working on Implantable Pacemaker Chip.
+            <img src="profile.jpg" alt="Profile" class="profile-img">
 
-</p>
+            <h1>HITIK KUMAR NAYAK</h1>
 
-<a href="resume.pdf"
-download
-class="btn">
+            <h2 class="typing-text">
+                Junior Research Fellow | VLSI & ASIC Design Engineer
+            </h2>
 
-Download Resume
+            <p>
+                Working on MeitY Sponsored C2S Project
+                <strong>Implantable Pacemaker Chip (iPACE-CHIP)</strong>
+                at ABV-IIITM Gwalior.
+            </p>
 
-</a>
+            <div class="hero-buttons">
 
-</div>
+                <a href="resume.pdf" class="btn">
+                    Download Resume
+                </a>
 
-</div>
+                <a href="#projects" class="btn btn-secondary">
+                    View Projects
+                </a>
 
-</section>
-<section id="about"
-class="about reveal">
+            </div>
 
-<h2 class="section-title">
-About Me
-</h2>
+            <div class="social-icons">
 
-<p>
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
 
-Electronics and Communication Engineer  
-with strong interest in VLSI Design,
-Analog Circuits, and IC Layout.
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
 
-Currently working on Cadence-based
-IC design including DRC, LVS,
-and PEX verification.
+                <a href="#">
+                    <i class="fas fa-envelope"></i>
+                </a>
 
-</p>
+            </div>
 
-</section>
-<section id="skills"
-class="skills reveal">
+        </div>
 
-<h2 class="section-title">
-Skills
-</h2>
+    </section>
 
-<div class="skills-container">
+    <!-- ========================= -->
+    <!-- QUICK STATS -->
+    <!-- ========================= -->
 
-<div class="skill-box">
+    <section class="stats">
 
-<h3>VLSI Design</h3>
+        <div class="stat-card">
+            <h2>1+</h2>
+            <p>ASIC Tape-Out</p>
+        </div>
 
-<p>
-Schematic & Layout Design
-</p>
+        <div class="stat-card">
+            <h2>4+</h2>
+            <p>Internships</p>
+        </div>
 
-</div>
+        <div class="stat-card">
+            <h2>3+</h2>
+            <p>Research Projects</p>
+        </div>
 
-<div class="skill-box">
+        <div class="stat-card">
+            <h2>GATE</h2>
+            <p>Qualified</p>
+        </div>
 
-<h3>Cadence</h3>
+    </section>
 
-<p>
-Virtuoso, DRC, LVS, PEX
-</p>
+    <!-- About Section Will Come Here -->
 
-</div>
+    <!-- Skills Section Will Come Here -->
 
-<div class="skill-box">
+    <!-- Experience Section Will Come Here -->
 
-<h3>Programming</h3>
+    <!-- Projects Section Will Come Here -->
 
-<p>
-Python, MATLAB
-</p>
+    <!-- Tape-Out Section Will Come Here -->
 
-</div>
+    <!-- Internship Section Will Come Here -->
 
-</div>
+    <!-- Achievement Section Will Come Here -->
 
-</section>
-<section id="projects"
-class="projects reveal">
+    <!-- Contact Section Will Come Here -->
 
-<h2 class="section-title">
-Projects
-</h2>
-
-<div class="filter-buttons">
-
-<button onclick="filterProjects('all')">All</button>
-<button onclick="filterProjects('analog')">Analog</button>
-<button onclick="filterProjects('digital')">Digital</button>
-<button onclick="filterProjects('layout')">Layout</button>
-
-</div>
-
-<div class="project-container">
-<div class="project-box analog">
-
-<h3>Two-Stage CMOS Amplifier</h3>
-
-<img src="images/amplifier_layout.png">
-
-<p>
-Cadence Virtuoso design.
-</p>
-
-<a href="https://github.com/hitiknayak"
-target="_blank">
-
-GitHub
-
-</a>
-
-</div>
-
-<div class="project-box digital">
-
-<h3>Hybrid Full Adder</h3>
-
-<img src="images/full_adder.png">
-
-<p>
-LT-Spice design.
-</p>
-
-<a href="https://github.com/hitiknayak"
-target="_blank">
-
-GitHub
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-<section id="iopad"
-class="iopad reveal">
-
-<h2 class="section-title">
-IO Pad Ring Gallery
-</h2>
-
-<div class="iopad-gallery">
-
-<img src="images/iopad1.png">
-<img src="images/iopad2.png">
-<img src="images/iopad3.png">
-<img src="images/iopad4.png">
-
-</div>
-
-</section>
-<section id="workflow"
-class="workflow reveal">
-
-<h2 class="section-title">
-Cadence Workflow Timeline
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">Schematic Design</div>
-<div class="timeline-item">Layout Design</div>
-<div class="timeline-item">DRC Check</div>
-<div class="timeline-item">LVS Check</div>
-<div class="timeline-item">PEX Extraction</div>
-
-</div>
-
-</section>
-<section id="verification"
-class="verification reveal">
-
-<h2 class="section-title">
-Verification Results
-</h2>
-
-<div class="verification-gallery">
-
-<div class="verify-box">
-<img src="images/drc_clean.png">
-</div>
-
-<div class="verify-box">
-<img src="images/lvs_matched.png">
-</div>
-
-<div class="verify-box">
-<img src="images/pex_output.png">
-</div>
-
-</div>
-
-</section>
-<section id="research"
-class="research reveal">
-
-<h2 class="section-title">
-Research Interests
-</h2>
-
-<div class="research-container">
-
-<div class="research-box">
-VLSI Design
-</div>
-
-<div class="research-box">
-Physical Design
-</div>
-
-<div class="research-box">
-Biomedical IC
-</div>
-
-</div>
-
-</section>
-<section id="contact"
-class="contact reveal">
-
-<h2 class="section-title">
-Contact Me
-</h2>
-
-<p>Email: hitikkumarnayak22@gmail.com</p>
-<p>Phone: +91 7978594517</p>
-
-<form>
-
-<input type="text"
-placeholder="Name">
-
-<input type="email"
-placeholder="Email">
-
-<textarea placeholder="Message"></textarea>
-
-<button class="btn">Send</button>
-
-</form>
-
-</section>
-<div id="imagePopup"
-class="popup">
-
-<span id="closePopup">×</span>
-
-<img id="popupImg">
-
-</div>
-<footer>
-
-<p>
-© 2026 Hitik Kumar Nayak
-</p>
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
 </html>
-
