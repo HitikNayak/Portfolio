@@ -29,8 +29,9 @@ document.querySelectorAll(".nav-links a")
 
     link.addEventListener("click", () => {
 
+       if(navLinks){
         navLinks.classList.remove("active");
-
+       }
         if(menuBtn){
             menuBtn.innerHTML =
             '<i class="fas fa-bars"></i>';
