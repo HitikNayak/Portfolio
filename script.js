@@ -215,10 +215,12 @@ function animateCounters(){
 
         };
 
-        counter.setAttribute(
-            "data-original",
-            counter.innerText
-        );
+if(!counter.hasAttribute("data-original")){
+    counter.setAttribute(
+        "data-original",
+        counter.innerText
+    );
+}
 
         updateCount();
 
