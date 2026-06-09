@@ -1928,3 +1928,20 @@ footer hr{
 
 }
 
+.project-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.project-link:hover{
+    transform:translateY(-8px);
+}
+
+.project-link .skill-gallery-card{
+    transition:0.4s;
+}
+
+.project-link:hover .skill-gallery-card{
+    box-shadow:0 0 25px rgba(0,212,255,.4);
+}
