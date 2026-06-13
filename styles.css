@@ -609,6 +609,32 @@ header{
     gap:30px;
 }
 
+.project-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.skill-gallery-card{
+    background:#1b2433;
+    border:1px solid rgba(0,255,255,0.2);
+    border-radius:25px;
+    overflow:hidden;
+    cursor:pointer;
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,0.15);
+
+    transition:0.4s;
+}
+
+.skill-gallery-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 0 30px rgba(0,255,255,0.4);
+}
+
 .skill-image-card{
     background:#161b22;
     border-radius:20px;
