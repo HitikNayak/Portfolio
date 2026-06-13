@@ -603,63 +603,45 @@ header{
 ========================= */
 
 .skills-gallery{
-    margin-top:70px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:30px;
+    margin-top:50px;
 }
 
 .project-link{
     text-decoration:none;
     color:inherit;
-    display:block;
 }
 
 .skill-gallery-card{
-    background:#1b2433;
-    border:1px solid rgba(0,255,255,0.2);
+    background:#1f2a3d;
     border-radius:25px;
     overflow:hidden;
-    cursor:pointer;
-
-    box-shadow:
-        0 0 15px rgba(0,255,255,0.15);
-
+    border:1px solid rgba(0,255,255,0.15);
+    box-shadow:0 0 20px rgba(0,255,255,0.12);
     transition:0.4s;
+    height:100%;
 }
 
 .skill-gallery-card:hover{
     transform:translateY(-10px);
-
-    box-shadow:
-        0 0 30px rgba(0,255,255,0.4);
+    box-shadow:0 0 30px rgba(0,255,255,0.4);
 }
 
-.skill-image-card{
-    background:#161b22;
-    border-radius:20px;
-    overflow:hidden;
-    text-align:center;
-    transition:.4s;
-}
-
-.skill-image-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px rgba(0,212,255,.25);
-}
-
-.skill-image-card img{
+.skill-gallery-card img{
     width:100%;
-    height:220px;
+    height:260px;
     object-fit:cover;
+    display:block;
 }
 
-.skill-image-card h4{
+.skill-gallery-card h3{
     padding:20px;
-    color:#00d4ff;
-    font-size:1.1rem;
+    font-size:1.5rem;
+    color:#fff;
+    font-weight:700;
 }
-
 /* =========================
    EXTRA SKILL BADGES
 ========================= */
