@@ -521,12 +521,8 @@ header{
         padding:25px;
     }
 
-   .hero{
-        background:url("mobile-bg.jpg") center center/cover no-repeat;
-    }
-
     .hero-video{
-        display:none;
+        display:block;
     }
 
 
