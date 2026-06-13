@@ -198,6 +198,20 @@ header{
     z-index:10;
     width:90%;
     max-width:900px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    text-align:center;
+    margin:0 auto;
+}
+
+.hero h1,
+.hero h2,
+.hero p{
+    text-align:center;
+    width:100%;
 }
 
 
@@ -431,6 +445,23 @@ header{
 
 @media(max-width:600px){
 
+   .hero-content{
+        width:95%;
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero h2{
+        font-size:1.1rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
     .profile-img{
         width:140px;
         height:140px;
@@ -449,7 +480,7 @@ header{
     }
 
        .hero{
-        background:url("background-mobile.jpg")
+        background:url("background-mobile.mp4")
                    center center/cover;
     }
 
