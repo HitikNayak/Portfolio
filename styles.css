@@ -508,14 +508,14 @@ header{
         padding:25px;
     }
 
-       .hero{
-        background:url("background-mobile.mp4")
-                   center center/cover;
+   .hero{
+        background:url("mobile-bg.jpg") center center/cover repeat;
     }
 
     .hero-video{
         display:none;
     }
+
 
 }
 
