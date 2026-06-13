@@ -509,7 +509,7 @@ header{
     }
 
    .hero{
-        background:url("mobile-bg.jpg") center center/cover repeat;
+        background:url("mobile-bg.jpg") center center/cover no-repeat;
     }
 
     .hero-video{
