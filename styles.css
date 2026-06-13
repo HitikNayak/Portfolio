@@ -162,6 +162,10 @@ header{
     min-height:100vh;
     position:relative;
     overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
 .hero-video{
@@ -193,13 +197,12 @@ header{
 }
 
 .hero-buttons{
-    width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
     gap:20px;
     flex-wrap:wrap;
-    margin-top:25px;
+    width:100%;
 }
 
 .hero-social{
